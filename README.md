@@ -14,7 +14,7 @@
    - First, create some variables(fields) that are parts of this CLASS (this takes place in the file different from the main class file). 
    - If you recall, CLASS is just a template. We need to create an object that will take that template. We go back to the **main class**  `class Main()`, create the object name(consider this name as the new user-defined datatype) and say `new` to initialize it. It's like we create the object based on the template 'CLASS'. 
 
-> 2. CONSTRUCTORS
+> 2.INHERITANCE
  - 
  
 
