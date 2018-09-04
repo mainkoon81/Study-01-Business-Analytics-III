@@ -20,7 +20,11 @@
  - First let's imagine the basic CLASS and add some states(fields) and behaviors(methods).
  - Then, let's imagine other CLASSES..If you want to inherit from another class (want to access the **states of behavior** in other classes, ie.. the common class), we use `extends` keyword. Then go to CODE > GENERATE > **constructor** 
  - Then What `super` means ?? 
-   - 
+   - Call the 'constructor' for the CLASS we are extending from..which is, we consider, the 'generic CLASS'.  
+ - Now, in this other classes, we can add specific features - extra fields, extra methods...
+ - When you are done, write the main class!!!
+ 
+ 
 
 
 
