@@ -15,9 +15,12 @@
    - If you recall, CLASS is just a template. We need to create an object that will take that template. We go back to the **main class**  `class Main()`, create the object name(consider this name as the new user-defined datatype) and say `new` to initialize it. It's like we create the object based on the template 'CLASS'. 
 
 > 2.INHERITANCE
- - 
- 
-
+ - the thing is different kinds of objects have a certain amount in common with each other.
+ - What OOP allows us to do is..to create **classes** to inherit commonly used standard behavior from other classes. 
+ - First let's imagine the basic CLASS and add some states(fields) and behaviors(methods).
+ - Then, let's imagine other CLASSES..If you want to inherit from another class (want to access the **states of behavior** in other classes, ie.. the common class), we use `extends` keyword. Then go to CODE > GENERATE > **constructor** 
+ - Then What `super` means ?? 
+   - 
 
 
 
