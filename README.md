@@ -30,9 +30,9 @@
      - class: the plan of the building
      - instance(object): Each building you build(instantiate using the new operator) 
      - reference: address. We can pass the references as parameters to **'constructors and methods'**. 
- <img src="https://user-images.githubusercontent.com/31917400/45090661-dc143780-b107-11e8-850c-f2ef6832d9c0.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/45090661-dc143780-b107-11e8-850c-f2ef6832d9c0.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/45090927-b4719f00-b108-11e8-93a4-8f3a78c822a9.jpg" />
 
- 
  
  - this VS super
  
