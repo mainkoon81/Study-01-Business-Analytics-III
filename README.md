@@ -30,7 +30,7 @@
      - class: the plan of the building
      - instance(object): Each building you build(instantiate using the new operator) 
      - reference: address. We can pass the references as parameters to **'constructors and methods'**. 
-<img src="https://user-images.githubusercontent.com/31917400/45091309-ee8f7080-b109-11e8-8312-0f17196730a0.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/45110748-0cc19480-b13b-11e8-9890-6a9167c37619.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45091507-92791c00-b10a-11e8-942a-ac5e82619a04.jpg" />
  
  - __this VS super VS this() VS super()__
