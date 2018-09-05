@@ -25,7 +25,7 @@
  - When you are done, write the main class!!!
 
 > 3. BlahBlah
- - Reference VS object VS instance VS class
+ - __Reference VS object VS instance VS class__
    - With an analogy of building a building, 
      - class: the plan of the building
      - instance(object): Each building you build(instantiate using the new operator) 
@@ -33,7 +33,7 @@
 <img src="https://user-images.githubusercontent.com/31917400/45091309-ee8f7080-b109-11e8-8312-0f17196730a0.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45091507-92791c00-b10a-11e8-942a-ac5e82619a04.jpg" />
  
- - this VS super VS this() VS super()
+ - __this VS super VS this() VS super()__
 <img src="https://user-images.githubusercontent.com/31917400/45110028-0e8a5880-b139-11e8-8fc5-b73728be12f0.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45110049-1e09a180-b139-11e8-8bb7-717524b63b80.jpg" />
  
