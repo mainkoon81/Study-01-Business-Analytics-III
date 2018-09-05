@@ -23,6 +23,25 @@
    - Call the 'constructor' for the CLASS we are extending from..which is, we consider, the 'generic CLASS'.  
  - Now, in this other classes, we can add specific features - extra fields, extra methods...
  - When you are done, write the main class!!!
+
+> 3. BlahBlah
+ - Reference VS object VS instance VS class
+   - With an analogy of building a building, 
+     - class: the plan of the building
+     - instance(object): Each building you build(instantiate using the new operator) 
+     - reference: address. We can pass the references as parameters to **'constructors and methods'**. 
+ <img src="https://user-images.githubusercontent.com/31917400/45090661-dc143780-b107-11e8-850c-f2ef6832d9c0.jpg" />
+
+ 
+ 
+ - this VS super
+ 
+ - Method Overloading VS Overriding
+ 
+ - Static Method VS Instance Method
+ 
+ - Static variable VS Instance variable
+ 
  
  
 
