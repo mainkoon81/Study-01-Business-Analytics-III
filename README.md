@@ -44,11 +44,11 @@
 <img src="https://user-images.githubusercontent.com/31917400/45167066-4902fc80-b1f0-11e8-9298-20d4c2778c43.jpg" />
 
  - __Static Method VS Instance Method__
-   - `Static` methods cannot access **instance methods and variables** directly. They're usually used for **operations that don't require any data from an instance** of the class (sth from `this` which is the current instance of a class). so we cannot use `this` keyword. 
+   - **Static** methods cannot access **instance methods and variables** directly. They're usually used for **operations that don't require any data from an instance** of the class (sth from `this` which is the current instance of a class). so we cannot use `this` keyword.
+   - **Instance** methods belong to an instance of a class. To use instance method, we need to **instantiate the class** first by using `new` keyword. Instance methods can access instance methods and variables directly. Instance methods can access static methods and variables directly.  
 <img src="https://user-images.githubusercontent.com/31917400/45169113-d0eb0580-b1f4-11e8-90ca-59be4996e8eb.jpg" />
-
-
-
+<img src="https://user-images.githubusercontent.com/31917400/45172581-a5204d80-b1fd-11e8-9071-dcebbe924b9f.jpg" />
+ 
  - Static variable VS Instance variable
  
  
