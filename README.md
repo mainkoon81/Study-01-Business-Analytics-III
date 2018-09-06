@@ -35,7 +35,7 @@
  
  - __this VS super VS this() VS super()__
 <img src="https://user-images.githubusercontent.com/31917400/45110028-0e8a5880-b139-11e8-8fc5-b73728be12f0.jpg" />
-<img src="https://user-images.githubusercontent.com/31917400/45110049-1e09a180-b139-11e8-8bb7-717524b63b80.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/45155143-e864c700-b1d1-11e8-89a5-3c02df213e54.jpg" />
  
  - Method Overloading VS Overriding
  
