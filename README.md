@@ -42,10 +42,13 @@
    - Method Overriding: defining a method in a child class that already present in parent class with same signature(name, arg). By extending the parent class, the child class can get all the methods in the parent. People refer to overriding as **Run-time polymorphism**(Dynamic method dispatch). We can't override **static method** but only **instance method**. 
      - note: constructor and private method cannot be overriden. It uses `super.method()` 
 <img src="https://user-images.githubusercontent.com/31917400/45167066-4902fc80-b1f0-11e8-9298-20d4c2778c43.jpg" />
- 
- 
- - Static Method VS Instance Method
- 
+
+ - __Static Method VS Instance Method__
+   - `Static` methods cannot access **instance methods and variables** directly. They're usually used for **operations that don't require any data from an instance** of the class (sth from `this` which is the current instance of a class). so we cannot use `this` keyword. 
+<img src="https://user-images.githubusercontent.com/31917400/45169113-d0eb0580-b1f4-11e8-90ca-59be4996e8eb.jpg" />
+
+
+
  - Static variable VS Instance variable
  
  
