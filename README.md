@@ -54,10 +54,11 @@
  - __Static(memeber) variable VS Instance variable__
    - **Static** variables are declared by keyword `static`. Every instance of that class **shares** the same static variable. If changes are made to that variable, all other instances will see the effect. 
      - For example, when Reading "user_input", using `scanner`, we declare `scanner` as a static variable.
-   - **Instance** variables  
-
-<img src="https://user-images.githubusercontent.com/31917400/45174321-78226980-b202-11e8-83d1-e8c6dc5ba0a1.jpg" />
-<img src="https://user-images.githubusercontent.com/31917400/45174321-78226980-b202-11e8-83d1-e8c6dc5ba0a1.jpg" />
+   - **Instance** variables belong to an instance of a class. 
+     - every instance has its own copy of an instance variable. 
+     - every instance can have a different value(state) and Instance variables represent the state of an instance. 
+<img src="https://user-images.githubusercontent.com/31917400/45174955-0cd99700-b204-11e8-8dc5-a7328f63fc40.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/45174959-0fd48780-b204-11e8-998d-290c7b9674ee.jpg" />
 
  
  
