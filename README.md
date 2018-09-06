@@ -61,6 +61,7 @@
 <img src="https://user-images.githubusercontent.com/31917400/45174959-0fd48780-b204-11e8-998d-290c7b9674ee.jpg" />
 
 > 4. Three components (Composition, Encapsulation, Polymorphism)
+
 __Composition__
  
 
