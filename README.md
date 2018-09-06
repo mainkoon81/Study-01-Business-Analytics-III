@@ -51,8 +51,14 @@
 <img src="https://user-images.githubusercontent.com/31917400/45169113-d0eb0580-b1f4-11e8-90ca-59be4996e8eb.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45172581-a5204d80-b1fd-11e8-9071-dcebbe924b9f.jpg" />
  
- - Static variable VS Instance variable
- 
+ - __Static(memeber) variable VS Instance variable__
+   - **Static** variables are declared by keyword `static`. Every instance of that class **shares** the same static variable. If changes are made to that variable, all other instances will see the effect. 
+     - For example, when Reading "user_input", using `scanner`, we declare `scanner` as a static variable.
+   - **Instance** variables  
+
+<img src="https://user-images.githubusercontent.com/31917400/45174321-78226980-b202-11e8-83d1-e8c6dc5ba0a1.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/45174321-78226980-b202-11e8-83d1-e8c6dc5ba0a1.jpg" />
+
  
  
 
