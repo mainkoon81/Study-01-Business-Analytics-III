@@ -24,7 +24,7 @@
  - Now, in this other classes, we can add specific features - extra fields, extra methods...
  - When you are done, write the main class!!!
 
-> 3. BlahBlah
+> 3. Basic Object Oriented Programming Knowledge
  - __Reference VS Instance(object) VS Class__
    - With an analogy of building a building, 
      - Class: the plan of the building
@@ -60,7 +60,12 @@
 <img src="https://user-images.githubusercontent.com/31917400/45174955-0cd99700-b204-11e8-8dc5-a7328f63fc40.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45174959-0fd48780-b204-11e8-998d-290c7b9674ee.jpg" />
 
+> 4. Three components
+Composition, Encapsulation, Polymorphism
+
+__Composition__
  
+
  
 
 
