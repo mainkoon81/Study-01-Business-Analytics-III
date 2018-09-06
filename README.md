@@ -25,19 +25,20 @@
  - When you are done, write the main class!!!
 
 > 3. BlahBlah
- - __Reference VS object VS instance VS class__
+ - __Reference VS Instance(object) VS Class__
    - With an analogy of building a building, 
-     - class: the plan of the building
-     - instance(object): Each building you build(instantiate using the new operator) 
-     - reference: address. We can pass the references as parameters to **'constructors and methods'**. 
+     - Class: the plan of the building
+     - Instance(object): Each building you build(instantiate using the new operator) 
+     - Reference: address. We can pass the references as parameters to **'constructors and methods'**. 
 <img src="https://user-images.githubusercontent.com/31917400/45151965-9cad2000-b1c7-11e8-9c99-d1304a007734.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45091507-92791c00-b10a-11e8-942a-ac5e82619a04.jpg" />
  
- - __this VS super VS this() VS super()__
+ - __`this` VS `super` VS `this()` VS `super()`__
 <img src="https://user-images.githubusercontent.com/31917400/45154051-1cd68400-b1ce-11e8-9d6b-52742f7bc85f.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45155143-e864c700-b1d1-11e8-89a5-3c02df213e54.jpg" />
  
- - Method Overloading VS Overriding
+ - __Method Overloading VS Overriding__
+ 
  
  - Static Method VS Instance Method
  
