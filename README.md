@@ -33,7 +33,7 @@
 <img src="https://user-images.githubusercontent.com/31917400/45151965-9cad2000-b1c7-11e8-9c99-d1304a007734.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45091507-92791c00-b10a-11e8-942a-ac5e82619a04.jpg" />
  
- - __`this` VS `super` VS `this()` VS `super()`__ 멤버 or 통째 
+ - __`this` VS `super` VS `this()` VS `super()`__ 멤버(variable, method) or 통째 
 <img src="https://user-images.githubusercontent.com/31917400/45154051-1cd68400-b1ce-11e8-9d6b-52742f7bc85f.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/45160043-57491c80-b1e0-11e8-991f-882d4b1afde5.jpg" />
  
