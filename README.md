@@ -15,14 +15,13 @@
    - If you recall, CLASS is just a template. We need to create an object that will take that template. We go back to the **main class**  `class Main()`, create the object name(consider this name as the new user-defined datatype) and say `new` to initialize it. It's like we create the object based on the template 'CLASS'. 
 
 > 2.INHERITANCE
- - the thing is different kinds of objects have a certain amount in common with each other.
- - What OOP allows us to do is..to create **classes** to inherit commonly used standard behavior from other classes. 
+ - The thing is different kinds of objects have a certain amount in common with each other. What OOP allows us to do is..to create **classes** to inherit commonly used standard behavior from other classes. Very simple little example: We have a class 'Vehicle'. and create a class 'Car' extends from 'Vehicle'. Now it's got a relationship with Vehicle. So you can quite correctly say, Car is a Vehicle and that's essentially what inheritance is.
  - First let's imagine the basic CLASS and add some states(fields) and behaviors(methods).
- - Then, let's imagine other CLASSES..If you want to inherit from another class (want to access the **states of behavior** in other classes, ie.. the common class), we use `extends` keyword. Then go to CODE > GENERATE > **constructor** 
- - Then What `super` means ?? 
-   - Call the 'constructor' for the CLASS we are extending from..which is, we consider, the 'generic CLASS'.  
- - Now, in this other classes, we can add specific features - extra fields, extra methods...
- - When you are done, write the main class!!!
+ - Then, let's imagine other CLASSES..If you want to inherit from another class (want to access the **states of behavior** in other classes, ie.. the common class), we use `extends` keyword. Then go to CODE > GENERATE > **constructor** to select inheritable fields..
+ - Then What `super()` means ?? 
+   - Call the 'constructor' for the CLASS we are extending from..which is, we consider, the 'generic CLASS' or 'parent'. So parent itself is summoned.  
+ - Now, in this other classes(the child class), we can add specific features - extra fields, extra methods...
+ - When it's done, we can write the main class!!!
 
 > 3. Basic Object Oriented Programming Knowledge
  - __Reference VS Instance(object) VS Class__
@@ -62,7 +61,7 @@
 
 > 4. Three components (Composition, Encapsulation, Polymorphism)
 
-__Composition__
+__Composition__: Let's look at the scenario of a computer. So our computer has a motherboard, a case, and a monitor but they are not computers in the same sense that a Car is a Vehicle(inheritance). But a computer has a motherboard, a computer has a case, and a computer has a monitor. So that's what composition is, is actually modeling "parts", if you will, "parts" of the **greater whole**. 
  
 
  
