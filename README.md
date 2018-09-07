@@ -61,7 +61,12 @@
 
 > 4. Three components (Composition, Encapsulation, Polymorphism)
 
-__Composition__: Let's look at the scenario of a computer. So our computer has a motherboard, a case, and a monitor but they are not computers in the same sense that a Car is a Vehicle(inheritance). But a computer has a motherboard, a computer has a case, and a computer has a monitor. So that's what composition is, is actually modeling "parts", if you will, "parts" of the **greater whole**. 
+__Composition__: Let's look at the scenario of a computer. So our computer has a motherboard, a case, and a monitor but they are not computers in the same sense that a Car is a Vehicle(inheritance). But a computer has a motherboard, a computer has a case, and a computer has a monitor. So that's what composition is, is actually modeling "parts", if you will, "parts" of the **greater whole**.
+ - **the obvious advantage here, is that if you're using the `extends` option to inherit, you can only, in Java, inherit from one class at a time, but here, we can access multiple classes at one go.**
+ 
+__Encapsulation__: Encapsulation is the mechanism that allows you to **restrict access** to certain components in the objects that you are creating (you're able to protect the members of a class from external access in order to guard against unauthorized access). It can be very useful to hide that **inner working** from another class to give you more control and to enable you to change things without breaking code elsewhere. 
+
+__Polymorphism__: Polymorphism is the mechanism that allows actions to act differently based on the actual object that the action is being performed on. 
  
 
  
