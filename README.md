@@ -1,6 +1,6 @@
 # Study-01-Business-Analytics-III
 
-### Intro to Object-Oriented-Programming
+### Java Object-Oriented-Programming
 > 1. CLASS
  - Two characteristics of the object
    - **state:** head_size? number of legs? wings? ... software object store it in **variable**. 
@@ -66,8 +66,17 @@ __Composition__: Let's look at the scenario of a computer. So our computer has a
  
 __Encapsulation__: Encapsulation is the mechanism that allows you to **restrict access** to certain components in the objects that you are creating (you're able to protect the members of a class from external access in order to guard against unauthorized access). It can be very useful to hide that **inner working** from another class to give you more control and to enable you to change things without breaking code elsewhere. 
 
-__Polymorphism__: Polymorphism is the mechanism that allows actions to act differently based on the actual object that the action is being performed on. 
+__Polymorphism__: Polymorphism is the mechanism that allows actions to act differently based on the actual object that the action is being performed on. For example, what's happening is, with that one line of code in `public static void main(String[] args) {...`,   which is `movie.plot()` (and all object are inherited from the base `movie` class) yields different outputs by actually assigning different functionality, depending on the type of object that we've created. you can see how polymorphism works now: It will automatically, if you're inheriting from another class, and you've got a method, and you override that method, that's what polymorphism is. 
+
+### multiple values
+> 1. array(store multiple values of the same type)
+ - 
  
+ 
+
+### Inner Class VS Abstract Class VS Interface
+> 1. Interface
+ -  
 
  
 
