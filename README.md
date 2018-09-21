@@ -68,18 +68,29 @@ __Encapsulation__: Encapsulation is the mechanism that allows you to **restrict 
 
 __Polymorphism__: Polymorphism is the mechanism that allows actions to act differently based on the actual object that the action is being performed on. For example, what's happening is, with that one line of code in `public static void main(String[] args) {...`,   which is `movie.plot()` (and all object are inherited from the base `movie` class) yields different outputs by actually assigning different functionality, depending on the type of object that we've created. you can see how polymorphism works now: It will automatically, if you're inheriting from another class, and you've got a method, and you override that method, that's what polymorphism is. 
 
-### multiple values
-> 1. array(store multiple values of the same type)
- - 
- 
- 
-
 ### Inner Class VS Abstract Class VS Interface
 > 1. Interface
  -  
 
- 
+> What is **object**?
+: Sth that should be manipulated by calling methods
+> What is **class**?
+: Sth that contains methods and sth that regulates and limits its methods
 
+> What is **type**?
+: to define values, operation(that would be carried out on the values??)
+  - ex) int, double, long, String, PrintStream, etc...
+  - those types also have **classes**(Integer, Double, Long, String, PrintStream, etc...)
+  - pure numbers(int, double, long, etc) are **not object** but **primitive types** while String, PrintStream, stc are **types** but **object** as well.
+
+> What is **identifier**?
+: name of variable or method or class
+ - It is an error to use a variable that has never had a value assigned to it.
+   ```
+   int height;      //?????
+   width = height;  // ERROR—uninitialized variable height!! 
+   ```
+ - 
 
 
 
