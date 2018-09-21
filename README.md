@@ -74,12 +74,18 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 
 
+
+
+
 > What is **type**?
 : to define values, operation(that would be carried out on the values??)
   - ex) int, double, long, String, PrintStream, etc...
   - those types also have **classes**(Integer, Double, Long, String, PrintStream, etc...)
   - pure numbers(int, double, long, etc) are not object but **primitive types** while String, PrintStream, stc are **types** but **class** as well. For example, the object `System.out` belongs to a class called **printStream**.
-
+```
+String name = "Minkun";
+String name = new String("Minkun");  // under the hood
+```
 > What is **object**?
 : Entity that should be manipulated by calling methods
   - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
@@ -95,14 +101,17 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
   - 4) **Object** reference: 
     - It describes the location of an object  
     - The `new` operator returns a reference to a new object 
-    - **Multiple object variables can refer to the same object**: Here 'box' is just an **address**, thus the change in box2 will change the object box as well. However, Note: Primitive type variables ≠ object variables      
+    - **Multiple object variables can refer to the same object**: Here 'box' is just an **address**, thus the change in box2 will change the object box as well. 
+    - However, Note: Primitive type variables ≠ object variables      
     ```
-    Rectangle box = new Rectangle(5, 10, 20, 30);    
+    Rectangle box = new Rectangle(5, 10, 20, 30);  //object variable   
     Rectangle box2 = box;     
     box2.translate(15, 25); 
+    
+    int number_1 = 50;       //primitive type variable
+    int number_2 = number_1;
+    int number_2 = 80;
     ```
-     
- 
 > What is **class**?
 : Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
  - **Public Interface**: it specifies what you can do with the objects of a class. 
