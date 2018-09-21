@@ -85,7 +85,8 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 > What is **identifier**?
 : name of variable or method or class
- - It is an error to use a variable that has never had a value assigned to it.
+ - It is an error to use an identifier that has never had a value assigned to it. Whe we write a variable, we need to steps
+   - 1) Declaration, 2) Initialization
    ```
    int height;      //?????
    width = height;  // ERROR—uninitialized variable height!! 
