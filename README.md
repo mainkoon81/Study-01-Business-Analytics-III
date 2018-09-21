@@ -86,13 +86,13 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
   
 > Constructing(creating) object
 : `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
-  - 1. `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
-  - 2. It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the object.  
-  - 3. It returns the object.
+  - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
+  - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the object.  
+  - 3) It returns the object.
   - basic method example:
     - `double width = box.getWidth()` ?
     - `double height = box.getHeight()` ?
-  -  **Object** reference: 
+  - 4) **Object** reference: 
     - It describes the location of an object  
     - The `new` operator returns a reference to a new object 
     - **Multiple object variables can refer to the same object**: Here 'box' is just an **address**, thus the change in box2 will change the object box as well. However, Note: Primitive type variables ≠ object variables      
