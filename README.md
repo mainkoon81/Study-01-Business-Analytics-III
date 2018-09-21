@@ -74,32 +74,41 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 
 
-
-
-> What is **object**?
-: Entity that should be manipulated by calling methods
-  - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
-> What is **class**?
-: Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
- - **Public Interface**: it specifies what you can do with the objects of a class. 
- - **Overloaded method**: when a class declares two methods with the same name, but different parameters. 
-
 > What is **type**?
 : to define values, operation(that would be carried out on the values??)
   - ex) int, double, long, String, PrintStream, etc...
   - those types also have **classes**(Integer, Double, Long, String, PrintStream, etc...)
   - pure numbers(int, double, long, etc) are not object but **primitive types** while String, PrintStream, stc are **types** but **class** as well. For example, the object `System.out` belongs to a class called **printStream**.
 
+> What is **object**?
+: Entity that should be manipulated by calling methods
+  - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
+  
+> Constructing(creating) object
+: `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
+  - 1. `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
+  - 2. It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the object.  
+  - 3. It returns the object.
+  - basic method
+    - `double width = box.getWidth()` ?
+    - `double height = box.getHeight()` ?
+ 
+> What is **class**?
+: Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
+ - **Public Interface**: it specifies what you can do with the objects of a class. 
+ - **Overloaded method**: when a class declares two methods with the same name, but different parameters. 
+
 > What is **identifier**?
 : name of variable or method or class
- - It is an error to use an identifier that has never had a value assigned to it. Whe we write a variable, we need to steps
+ - It is an error to use an identifier that has never had a value assigned to it. When we write a variable, we need to take 2 steps
    - 1) Declaration 
    - 2) Initialization
    ```
    int height;      
    width = height;  // ERROR—uninitialized variable height!! 
    ```
-
+> What is **API** ?
+:  API documentation lists **classes and methods** in the Java library 
 
 
 
