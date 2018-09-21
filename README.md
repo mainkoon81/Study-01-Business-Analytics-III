@@ -89,9 +89,19 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
   - 1. `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
   - 2. It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the object.  
   - 3. It returns the object.
-  - basic method
+  - basic method example:
     - `double width = box.getWidth()` ?
     - `double height = box.getHeight()` ?
+  -  **Object** reference: 
+    - It describes the location of an object  
+    - The `new` operator returns a reference to a new object 
+    - **Multiple object variables can refer to the same object**: Here 'box' is just an **address**, thus the change in box2 will change the object box as well. However, Note: Primitive type variables ≠ object variables      
+    ```
+    Rectangle box = new Rectangle(5, 10, 20, 30);    
+    Rectangle box2 = box;     
+    box2.translate(15, 25); 
+    ```
+     
  
 > What is **class**?
 : Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
@@ -107,10 +117,13 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
    int height;      
    width = height;  // ERROR—uninitialized variable height!! 
    ```
-> What is **API** ?
+> What is **API** documentation?
 :  API documentation lists **classes and methods** in the Java library 
-
-
+ - The detailed description of a method shows:  
+   - The action that the method carries out 
+   - The parameters that the method receives 
+   - The value that it returns (or the reserved word void if the method doesn’t return any value) 
+   - Package: a collection of classes with a related purpose
 
 
 
