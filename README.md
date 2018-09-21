@@ -77,7 +77,7 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 
 
-> What is **type**?
+__What is **type**?__
 : to define values, operation(that would be carried out on the values??)
   - ex) int, double, long, String, PrintStream, etc...
   - those types also have **classes**(Integer, Double, Long, String, PrintStream, etc...)
@@ -86,7 +86,7 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 String name = "Minkun";
 String name = new String("Minkun");  // under the hood
 ```
-> What is **object**?
+__What is **object**?__
 : Entity that should be manipulated by calling methods
   - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
   
@@ -112,12 +112,12 @@ String name = new String("Minkun");  // under the hood
     int number_2 = number_1;
     int number_2 = 80;
     ```
-> What is **class**?
+__What is **class**?__
 : Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
  - **Public Interface**: it specifies what you can do with the objects of a class. 
  - **Overloaded method**: when a class declares two methods with the same name, but different parameters. 
 
-> What is **identifier**?
+__What is **identifier**?__
 : name of variable or method or class
  - It is an error to use an identifier that has never had a value assigned to it. When we write a variable, we need to take 2 steps
    - 1) Declaration 
@@ -126,7 +126,7 @@ String name = new String("Minkun");  // under the hood
    int height;      
    width = height;  // ERROR—uninitialized variable height!! 
    ```
-> What is **API** documentation?
+__What is **API** documentation?__
 :  API documentation lists **classes and methods** in the Java library 
  - The detailed description of a method shows:  
    - The action that the method carries out 
@@ -134,6 +134,7 @@ String name = new String("Minkun");  // under the hood
    - The value that it returns (or the reserved word void if the method doesn’t return any value) 
    - Package: a collection of classes with a related purpose
 
+### Data types
 
 
 
