@@ -70,7 +70,7 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 ### Inner Class VS Abstract Class VS Interface
 > 1. Interface
- -  
+ - ??????? 
 
 
 
@@ -114,7 +114,6 @@ __What is **object**?__
     ```
 __What is **class**?__
 : Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
- - **Public Interface**: it specifies what you can do with the objects of a class. 
  - **Overloaded method**: when a class declares two methods with the same name, but different parameters. 
 
 __What is **identifier**?__
@@ -133,6 +132,69 @@ __What is **API** documentation?__
    - The parameters that the method receives 
    - The value that it returns (or the reserved word void if the method doesn’t return any value) 
    - Package: a collection of classes with a related purpose
+   
+__instance identifier__
+ - when an object is initialized..
+`Rectangle **box** = new Rectangle(5,10,15,20);`
+
+__how to declare a class?__
+ - when creating an object of a class...
+1> instance variable
+```
+public class Counter {
+      private int **value**;
+```      
+: it stores the data of an **object of a class**.
+ - it should always be `private` unless it is a **constant**(generally accepted).
+ - Each **object of a class** has its own set of instance variables. 
+ - How to declare instance variable? :
+   - `private`: accessor(modifier)
+   - `int`: type declaration
+   - `**value**`: variable name
+ 
+2> methods 
+ - instance variables can only be accessed by **methods** of the same class.
+# When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference 
+```
+public class Counter {
+      private int **value**;
+       
+      // writing methods, this is called 'pubic interface'
+      public void count() {
+            value = value + 1; }
+      public void reset() {
+            value = 0; }
+      public int getValue() {
+            return value; }
+```
+3> constructors 
+ - it initializes the instance variables.
+ - Constructor name is class name, and all constructors of a class have the same name(with different parametors).
+ - Constructor body is executed when new object is created.
+# When you refer to an instance variable in a constructor, the compiler automatically applies it to the `this` reference 
+
+```
+public class Counter {
+      // this is the instance variable
+      private int **value**;
+      
+      // writing a constructor, this is called 'public interface'
+      public Counter() {
+            this.value = 0; }
+      public Counter(double init_value) {
+            this.value = init_value; }
+```
+'public interface' specifies what you can do with the objects of a class. The**public constructors and methods** of a class form the public interface of the class.
+
+
+
+
+
+
+
+__class variable__
+: 
+
 
 ### Data types
 
