@@ -226,8 +226,26 @@ public class Human {
           fun = fun + 1; }              // fun is an instance variable. talk() is a method.
 ```
 
+> increment & decrement 
+ - The idea is that `++i` increments i and **returns that value**, while `i++` **returns i's value first** and then increments i.
+```
+int i = 0;
+int j = i++;
+int k = ++i;
+System.out.println(i);  //? 2
+System.out.println(j);  //? 0
+System.out.println(k);  //? 2
+```
 
+> practice: Analyzing an Expression 
+```
 
+```
+
+> practice: 'CashRegister.java'
+```
+
+```
 
 
 
