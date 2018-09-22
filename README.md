@@ -75,13 +75,13 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 
 
-
+## [concept]
 
 __What is **type**?__
-: to define values, operation(that would be carried out on the values??)
+: to define **values** or **object_class**(operation) that would be carried out on the values
   - ex) int, double, long, String, PrintStream, etc...
-  - those types also have **classes**(Integer, Double, Long, String, PrintStream, etc...)
-  - pure numbers(int, double, long, etc) are not object but **primitive types** while String, PrintStream, stc are **types** but **class** as well. For example, the object `System.out` belongs to a class called **printStream**.
+  - those types also have **classes** such as Integer, Double, Long, String, PrintStream, etc...
+  - pure numbers(int, double, long, etc) are not **object_class** but **primitive** types while String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
 
 __What is **object**?__
 : Entity that should be manipulated by calling methods
@@ -91,7 +91,21 @@ __What is **object**?__
 String name = "Minkun";
 String name = new String("Minkun");  // under the hood
 ```  
-> Constructing(creating) object
+__What is **class**?__
+: Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
+ - **Overloaded method**: when a class declares multiple methods with the same name, but different parameters. 
+
+__What is **identifier**?__
+: name of variable or method or class
+ - When we write a variable, we need to take 2 steps:
+   - 1) Declaration 
+   - 2) Initialization
+ - It is an error to use an identifier that has never had a value assigned to it.
+   ```
+   int height;      
+   width = height;  // ERROR—uninitialized variable height!! 
+   ```
+__How to create an object?__
 : `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
   - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
   - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the object.  
@@ -113,19 +127,6 @@ String name = new String("Minkun");  // under the hood
     int number_2 = number_1;
     int number_2 = 80;
     ```
-__What is **class**?__
-: Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
- - **Overloaded method**: when a class declares two methods with the same name, but different parameters. 
-
-__What is **identifier**?__
-: name of variable or method or class
- - It is an error to use an identifier that has never had a value assigned to it. When we write a variable, we need to take 2 steps
-   - 1) Declaration 
-   - 2) Initialization
-   ```
-   int height;      
-   width = height;  // ERROR—uninitialized variable height!! 
-   ```
 __What is **API** documentation?__
 :  API documentation lists **classes and methods** in the Java library 
  - The detailed description of a method shows:  
