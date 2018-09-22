@@ -90,56 +90,64 @@ __# What is **type**?__
 > Type define **values** or **object_class**(operation) that would be carried out on the values. Note that `int, double, long, String, PrintStream, etc...` those types also have **classes** such as `Integer, Double, Long, String, PrintStream, etc...`. 
 
 > pure numbers(int, double, long, etc) are not **object_class** but **primitive** types. 
-
+```
+int num = 19;  // 'num' is not an object.
+```
 > String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
 
 __# What is **object**?__
 > Entity that should be manipulated by calling methods.
 
-> Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
-> For example, this is an object that belongs to a class called 'String', but actually `String name = new String("Minkun");` under the hood..
+> Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**.
+
+> For example, this is an object that belongs to a class called 'String'.
 ```
-String name = "Minkun";
+String name = "Minkun";  // 'name' object belongs to 'Sting' class.
+```
+> there is a particular way to create an object. This is actually `String name = new String("Minkun");` under the hood..
+
+__# What is **writing a variable**?__
+ - 1) Declaration 
+ - 2) Initialization
+ - When we write a variable, we need to take these 2 steps
+> name of variable or method or object or class: **identifier**
+
+> so...It is an error to use an identifier that has never had a value assigned to it.
+```
+int height;      
+width = height;  // ERROR—uninitialized variable height!! 
 ```
 
-__# What is **identifier**?__
-: name of variable or method or class
- - When we write a variable, we need to take 2 steps:
-   - 1) Declaration 
-   - 2) Initialization
- - It is an error to use an identifier that has never had a value assigned to it.
-   ```
-   int height;      
-   width = height;  // ERROR—uninitialized variable height!! 
-   ```
 __# How to create an object?__
-: `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
-  - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
-  - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'. An object is an instance. And this instance is called 'box'.  
-  - 3) basic method example:
-    - `double width = box.getWidth()` ?
-    - `double height = box.getHeight()` ?
-  - 4) **Object** reference: 
-    - The `new` keyword returns a reference(location) to a new object 
-    - **Multiple object variables can refer to the same object**: 
-      - Here 'box' is just an **address**, thus the change in box2 will change the object box as well. 
-    - However, Note: Primitive type variables ≠ object variables      
-    ```
-    Rectangle box = new Rectangle(5, 10, 20, 30);  //object variable   
-    Rectangle box2 = box;     
-    box2.translate(15, 25); 
+
+`Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
+
+ - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
+ - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'. An object is an instance. And this instance is called 'box'.  
+ - 3) basic method example:
+   - `double width = box.getWidth()` ?
+   - `double height = box.getHeight()` ?
+ - 4) **Object** reference: 
+   - The `new` keyword returns a reference(location) to a new object 
+   - **Multiple object variables can refer to the same object**: 
+     - Here 'box' is just an **address**, thus the change in box2 will change the object box as well. 
+   - However, Note: Primitive type variables ≠ object variables      
+```
+Rectangle box = new Rectangle(5, 10, 20, 30);  //object variable   
+Rectangle box2 = box;     
+box2.translate(15, 25); 
     
-    int number_1 = 50;       //primitive type variable
-    int number_2 = number_1;
-    int number_2 = 80;
-    ```
+int number_1 = 50;       //primitive type variable
+int number_2 = number_1;
+int number_2 = 80;
+```
+
 __# What is **API** documentation?__
-:  API documentation lists **classes and methods** in the Java library 
- - The detailed description of a method shows:  
-   - The action that the method carries out 
-   - The parameters that the method receives 
-   - The value that it returns (or the reserved word void if the method doesn’t return any value) 
-   - Package: a collection of classes with a related purpose
+> API documentation lists **classes and methods** in the Java library. The detailed description of a method shows:  
+ - The action that the method carries out 
+ - The parameters that the method receives 
+ - The value that it returns (or the reserved word void if the method doesn’t return any value) 
+ - Package: a collection of classes with a related purpose
 
 
 
