@@ -87,13 +87,13 @@ __# What is **class**?__
 __# What is **type**?__
  - primitive type
  - object_class type
-> Type define **values** or **object_class**(operation) that would be carried out on the values. Note that `int, double, long, String, PrintStream, etc...` those types also have **classes** such as `Integer, Double, Long, String, PrintStream, etc...`. 
+> Type define **values** or **class_object**(operation) that would be carried out on the values. Note that `int, double, long, String, PrintStream, etc...` those types also have **classes** such as `Integer, Double, Long, String, PrintStream, etc...`. 
 
-> pure numbers(int, double, long, etc) are not **object_class** but **primitive** types. 
+> pure numbers(int, double, long, etc) are not **class_object** but **primitive** types. 
 ```
 int num = 19;  // 'num' is not an object.
 ```
-> String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
+> String, PrintStream are **class_object** types. For example, the object `System.out` belongs to a class_object type called **printStream**.
 
 __# What is **object**?__
 > Entity that should be manipulated by calling methods.
@@ -111,9 +111,9 @@ __# What is **writing a variable**?__
  - 2) Initialization
  - When we write a variable, we need to take these 2 steps
 > name of variable or method or object or class: **identifier**
- - then method is a variable?????
- - then object is a variable?????
- - then class ia a variable????? 
+ - then method is a variable?????????????????????????????????????????????
+ - then object(instance) is a variable????????????????????????????????????????????????????
+ - then class ia a variable?????????????????????????????????????????????????? 
 
 > so...It is an error to use an identifier that has never had a value assigned to it.
 ```
@@ -128,7 +128,7 @@ __# How to create an object?__
  - 1) Assumming there is already a class called 'Rectangle' somewhere? 
  - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'.
    - **An object is an instance.** And this instance is called 'box'. 
-   - basic method for 'box' example:
+   - then basic method for 'box' example:
      - `double width = box.getWidth()` ?
      - `double height = box.getHeight()` ?
  - 3) **Object** reference: 
@@ -137,13 +137,13 @@ __# How to create an object?__
      - Here 'box' is just an **address**, thus the change in box2 will change the object box as well. 
    - However, Note: Primitive type variables ≠ object variables      
 ```
-Rectangle box = new Rectangle(5, 10, 20, 30);  //object variable   
+Rectangle box1 = new Rectangle(5, 10, 20, 30);  // object variable   
 Rectangle box2 = box;     
-box2.translate(15, 25); 
+box2.translate(15, 25);                         // 'box1' value has changed
     
-int number_1 = 50;                             //primitive type variable
+int number_1 = 50;                              // primitive type variable
 int number_2 = number_1;
-int number_2 = 80;
+int number_2 = 80;                              // 'number_1' value does not change
 ```
 
 __# What is **API** documentation?__
@@ -153,54 +153,23 @@ __# What is **API** documentation?__
  - The value that it returns (or the reserved word void if the method doesn’t return any value) 
  - Package: a collection of classes with a related purpose
 
-
-
-
-
-
-
-
-
-
-
-
-
-__instance identifier__
- - when an object is initialized..
-`Rectangle **box** = new Rectangle(5,10,15,20);`
-
-__how to declare a class?__
- - when creating an object of a class...
+# ok
+__how to declare a class?__ creating a class_object...
  
-1> instance variable
+> 1> instance variable (object)
 ```
 public class Counter {
       private int **value**;
 ```      
-: it stores the data of an **object of a class**.
+: it stores the data of a **class_object**.
  - it should always be `private` unless it is a **constant**(generally accepted).
- - Each **object of a class** has its own set of instance variables. 
+ - Each **class_object** has its own set of instance variables. 
  - How to declare instance variable? :
    - `private`: accessor(modifier)
    - `int`: type declaration
    - `**value**`: variable name
- 
-2> methods 
- - instance variables can only be accessed by **methods** of the same class.
-# When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference ?
-```
-public class Counter {
-      private int **value**;
-       
-      // writing methods, this is called 'pubic interface'
-      public void count() {
-            value = value + 1; }
-      public void reset() {
-            value = 0; }
-      public int getValue() {
-            return value; }
-```
-3> constructors 
+   
+> 2> constructors (object)
  - it initializes the instance variables.
  - Constructor name is class name, and all constructors of a class have the same name(with different parametors).
  - Constructor body is executed when new object is created.
@@ -217,7 +186,24 @@ public class Counter {
       public Counter(double init_value) {
             this.value = init_value; }
 ```
-'public interface' specifies what you can do with the objects of a class. The**public constructors and methods** of a class form the public interface of the class.
+'public interface' specifies what you can do with the objects of a class. The**public constructors and methods** of a class form the public interface of the class. 
+
+> 3> methods 
+ - instance variables can only be accessed by **methods** of the same class.
+# When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference ?
+```
+public class Counter {
+      private int **value**;
+       
+      // writing methods, this is called 'pubic interface'
+      public void count() {
+            value = value + 1; }
+      public void reset() {
+            value = 0; }
+      public int getValue() {
+            return value; }
+```
+
 
 
 
