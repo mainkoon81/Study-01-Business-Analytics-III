@@ -82,14 +82,15 @@ __What is **type**?__
   - ex) int, double, long, String, PrintStream, etc...
   - those types also have **classes**(Integer, Double, Long, String, PrintStream, etc...)
   - pure numbers(int, double, long, etc) are not object but **primitive types** while String, PrintStream, stc are **types** but **class** as well. For example, the object `System.out` belongs to a class called **printStream**.
-```
-String name = "Minkun";
-String name = new String("Minkun");  // under the hood
-```
+
 __What is **object**?__
 : Entity that should be manipulated by calling methods
   - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
-  
+  - this is an object:
+```
+String name = "Minkun";
+String name = new String("Minkun");  // under the hood
+```  
 > Constructing(creating) object
 : `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
   - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
@@ -154,7 +155,7 @@ public class Counter {
  
 2> methods 
  - instance variables can only be accessed by **methods** of the same class.
-# When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference 
+# When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference ?
 ```
 public class Counter {
       private int **value**;
@@ -171,7 +172,7 @@ public class Counter {
  - it initializes the instance variables.
  - Constructor name is class name, and all constructors of a class have the same name(with different parametors).
  - Constructor body is executed when new object is created.
-# When you refer to an instance variable in a constructor, the compiler automatically applies it to the `this` reference 
+# When you refer to an instance variable in a constructor, the compiler automatically applies it to the `this` reference ?
 
 ```
 public class Counter {
@@ -192,13 +193,38 @@ public class Counter {
 
 
 
-__class variable__
-: 
-
+# object class = instace ???
+# then what's difference b/w instance vs class ??
 
 ### Data types
-
-
+> What is a constant? 
+ - `final` variable. Once its value has been set, it cannot be changed. 
+ - Convention: Use all-uppercase names for constants... 
+ - If constant values are needed in several methods, tag them as `static` and `final`.
+```
+public class Math {
+      public static final double PI = 3.14159265358979323846;
+```
+> **object value** and `static`and `final`
+ - __accessible by what?__ 
+ - object value (created by User) can be manipulated by calling **methods** by User, and accessible by object ???: `fun.talk()`???
+ - tagged by `static`, it becomes a **class variable** only accessible by **class_name**: `Human.GOD` 
+ - Otherwise, it's an **instance variable** accessible by **object**: `man.age`
+ - tagged by `final`, the value just **cannot be modified**, and still accessible by **class_name**: `Human.God`
+```
+public class Human {
+     private double fun;                 // fun is an instance variable
+     private int age;                    // age is an instance variable 
+     public static final int GOD = 0;   // GOD is an class variable
+     
+     Human man = new Human();           // object 
+     Human woman = new Human();         // object
+     man.age = 15;                      // age is an instance variable
+     woman.age =20;                     // age is an instance variable 
+     
+     public void talk() {
+          fun = fun + 1; }              // fun is an instance variable. talk() is a method.
+```
 
 
 
