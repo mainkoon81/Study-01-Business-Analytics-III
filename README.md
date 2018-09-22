@@ -108,15 +108,14 @@ __What is **identifier**?__
 __How to create an object?__
 : `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
   - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
-  - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the object.  
-  - 3) It returns the object.
-  - basic method example:
+  - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'. An object is an instance. And this instance is called 'box'.  
+  - 3) basic method example:
     - `double width = box.getWidth()` ?
     - `double height = box.getHeight()` ?
   - 4) **Object** reference: 
-    - It describes the location of an object  
-    - The `new` operator returns a reference to a new object 
-    - **Multiple object variables can refer to the same object**: Here 'box' is just an **address**, thus the change in box2 will change the object box as well. 
+    - The `new` keyword returns a reference(location) to a new object 
+    - **Multiple object variables can refer to the same object**: 
+      - Here 'box' is just an **address**, thus the change in box2 will change the object box as well. 
     - However, Note: Primitive type variables ≠ object variables      
     ```
     Rectangle box = new Rectangle(5, 10, 20, 30);  //object variable   
@@ -134,13 +133,18 @@ __What is **API** documentation?__
    - The parameters that the method receives 
    - The value that it returns (or the reserved word void if the method doesn’t return any value) 
    - Package: a collection of classes with a related purpose
-   
+
+
+
+
+
 __instance identifier__
  - when an object is initialized..
 `Rectangle **box** = new Rectangle(5,10,15,20);`
 
 __how to declare a class?__
  - when creating an object of a class...
+ 
 1> instance variable
 ```
 public class Counter {
@@ -193,9 +197,6 @@ public class Counter {
 
 
 
-
-# object class = instace ???
-# then what's difference b/w instance vs class ??
 
 ### Data types
 > What is a constant? 
