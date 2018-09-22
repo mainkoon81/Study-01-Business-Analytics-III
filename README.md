@@ -97,11 +97,10 @@ __# What is **object**?__
 > Entity that should be manipulated by calling methods.
 
 > Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
-> For example, this is an object:
+> For example, this is an object that belongs to a class called 'String', but actually `String name = new String("Minkun");` under the hood..
 ```
 String name = "Minkun";
 ```
-but actually `String name = new String("Minkun");` under the hood..
 
 __# What is **identifier**?__
 : name of variable or method or class
