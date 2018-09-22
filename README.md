@@ -111,6 +111,9 @@ __# What is **writing a variable**?__
  - 2) Initialization
  - When we write a variable, we need to take these 2 steps
 > name of variable or method or object or class: **identifier**
+ - then method is a variable?????
+ - then object is a variable?????
+ - then class ia a variable????? 
 
 > so...It is an error to use an identifier that has never had a value assigned to it.
 ```
@@ -122,13 +125,14 @@ __# How to create an object?__
 
 `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
 
- - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
- - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'. An object is an instance. And this instance is called 'box'.  
- - 3) basic method example:
-   - `double width = box.getWidth()` ?
-   - `double height = box.getHeight()` ?
- - 4) **Object** reference: 
-   - The `new` keyword returns a reference(location) to a new object 
+ - 1) Assumming there is already a class called 'Rectangle' somewhere? 
+ - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'.
+   - **An object is an instance.** And this instance is called 'box'. 
+   - basic method for 'box' example:
+     - `double width = box.getWidth()` ?
+     - `double height = box.getHeight()` ?
+ - 3) **Object** reference: 
+   - The `new` keyword returns a reference(location) to a new object. 
    - **Multiple object variables can refer to the same object**: 
      - Here 'box' is just an **address**, thus the change in box2 will change the object box as well. 
    - However, Note: Primitive type variables ≠ object variables      
@@ -137,7 +141,7 @@ Rectangle box = new Rectangle(5, 10, 20, 30);  //object variable
 Rectangle box2 = box;     
 box2.translate(15, 25); 
     
-int number_1 = 50;       //primitive type variable
+int number_1 = 50;                             //primitive type variable
 int number_2 = number_1;
 int number_2 = 80;
 ```
