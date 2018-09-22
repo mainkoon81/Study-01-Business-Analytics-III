@@ -77,23 +77,30 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 ## [concept]
 
+__# What is **class**?__
+ - objects
+ - methods
+> Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
+
+> **Overloaded method**: when a class declares multiple methods with the same name, but different parameters. 
+ 
 __# What is **type**?__
-: to define **values** or **object_class**(operation) that would be carried out on the values
-  - ex) int, double, long, String, PrintStream, etc...
-  - those types also have **classes** such as Integer, Double, Long, String, PrintStream, etc...
-  - pure numbers(int, double, long, etc) are not **object_class** but **primitive** types while String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
+ - primitive type
+ - object_class type
+> Type define **values** or **object_class**(operation) that would be carried out on the values
+ - ex) int, double, long, String, PrintStream, etc...
+ - those types also have **classes** such as Integer, Double, Long, String, PrintStream, etc...
+   - pure numbers(int, double, long, etc) are not **object_class** but **primitive** types 
+   - String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
 
 __# What is **object**?__
-: Entity that should be manipulated by calling methods
-  - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
-  - this is an object:
+> Entity that should be manipulated by calling methods.
+ - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
+ - this is an object:
 ```
 String name = "Minkun";
-String name = new String("Minkun");  // under the hood
-```  
-__# What is **class**?__
-: Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
- - **Overloaded method**: when a class declares multiple methods with the same name, but different parameters. 
+```
+but actually `String name = new String("Minkun");` under the hood..
 
 __# What is **identifier**?__
 : name of variable or method or class
@@ -133,6 +140,14 @@ __# What is **API** documentation?__
    - The parameters that the method receives 
    - The value that it returns (or the reserved word void if the method doesn’t return any value) 
    - Package: a collection of classes with a related purpose
+
+
+
+
+
+
+
+
 
 
 
