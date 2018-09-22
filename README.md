@@ -77,13 +77,13 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 ## [concept]
 
-__What is **type**?__
+__# What is **type**?__
 : to define **values** or **object_class**(operation) that would be carried out on the values
   - ex) int, double, long, String, PrintStream, etc...
   - those types also have **classes** such as Integer, Double, Long, String, PrintStream, etc...
   - pure numbers(int, double, long, etc) are not **object_class** but **primitive** types while String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
 
-__What is **object**?__
+__# What is **object**?__
 : Entity that should be manipulated by calling methods
   - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
   - this is an object:
@@ -91,11 +91,11 @@ __What is **object**?__
 String name = "Minkun";
 String name = new String("Minkun");  // under the hood
 ```  
-__What is **class**?__
+__# What is **class**?__
 : Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
  - **Overloaded method**: when a class declares multiple methods with the same name, but different parameters. 
 
-__What is **identifier**?__
+__# What is **identifier**?__
 : name of variable or method or class
  - When we write a variable, we need to take 2 steps:
    - 1) Declaration 
@@ -105,7 +105,7 @@ __What is **identifier**?__
    int height;      
    width = height;  // ERROR—uninitialized variable height!! 
    ```
-__How to create an object?__
+__# How to create an object?__
 : `Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
   - 1) `new` operator makes a `Rectangle()` object (Here, assumming someone already created the Rectangle Class somewhere!). 
   - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'. An object is an instance. And this instance is called 'box'.  
@@ -126,7 +126,7 @@ __How to create an object?__
     int number_2 = number_1;
     int number_2 = 80;
     ```
-__What is **API** documentation?__
+__# What is **API** documentation?__
 :  API documentation lists **classes and methods** in the Java library 
  - The detailed description of a method shows:  
    - The action that the method carries out 
