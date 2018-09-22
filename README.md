@@ -87,16 +87,17 @@ __# What is **class**?__
 __# What is **type**?__
  - primitive type
  - object_class type
-> Type define **values** or **object_class**(operation) that would be carried out on the values
- - ex) int, double, long, String, PrintStream, etc...
- - those types also have **classes** such as Integer, Double, Long, String, PrintStream, etc...
-   - pure numbers(int, double, long, etc) are not **object_class** but **primitive** types 
-   - String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
+> Type define **values** or **object_class**(operation) that would be carried out on the values. Note that `int, double, long, String, PrintStream, etc...` those types also have **classes** such as `Integer, Double, Long, String, PrintStream, etc...`. 
+
+> pure numbers(int, double, long, etc) are not **object_class** but **primitive** types. 
+
+> String, PrintStream are **object_class** types. For example, the object `System.out` belongs to an object_class type called **printStream**.
 
 __# What is **object**?__
 > Entity that should be manipulated by calling methods.
- - Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
- - this is an object:
+
+> Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**. 
+> For example, this is an object:
 ```
 String name = "Minkun";
 ```
