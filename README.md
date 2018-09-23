@@ -118,9 +118,11 @@ width = height;  // ERROR—uninitialized variable height!!
 ```
 
 __# How to create an object?__
-
-`Rectangle box = new Rectangle(5, 10, 20, 30);` or `Rectangle box = new Rectangle();`
-
+```
+Rectangle box = new Rectangle(5, 10, 20, 30);
+Rectangle box = new Rectangle();
+```
+ - `type + obj_identifier = referencing_keyword + constructor(param);`
  - 1) Assumming there is already a class called 'Rectangle' somewhere? 
  - 2) It uses the parameters (in this case, 5, 10, 20, and 30) to **initialize** the data of the **object** which would be one of the many, many objects that can be born from the class called 'Rectangle'.
    - **An object is an instance.** And this instance is called 'box'. 
