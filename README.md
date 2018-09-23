@@ -210,7 +210,6 @@ public class Counter {
 ```
 <img src="https://user-images.githubusercontent.com/31917400/45927098-9f2cab00-bf25-11e8-993f-0f3578cefb98.jpg" />
 
-
 ### Data types
 > What is a constant? 
  - `final` variable. Once its value has been set, it cannot be changed. 
@@ -240,6 +239,9 @@ public class Human {
      public void talk() {
           fun = fun + 1; }              // fun is an instance variable. talk() is a method.
 ```
+> Class Method example(class.method)
+ - Convert string to number: `Integer.parseInt(input)`, `Double.parseDouble(input)`
+ - Convert number to string: `String blah = "" + input;`, `blah = Integer.toString(input)`???
 
 > increment & decrement 
  - The idea is that `++i` increments i and **returns that value**, while `i++` **returns i's value first** and then increments i.
@@ -251,17 +253,6 @@ System.out.println(i);  //? 2
 System.out.println(j);  //? 0
 System.out.println(k);  //? 2
 ```
-
-> practice: Analyzing an Expression 
-```
-
-```
-
-> practice: 'CashRegister.java'
-```
-
-```
-
 
 
 
