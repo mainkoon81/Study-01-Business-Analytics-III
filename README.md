@@ -153,60 +153,62 @@ __# What is **API** documentation?__
 
 # ok
 __how to declare a class?__ let's create a class_object...
+
+## it's all about differentiating the `property`, `functionality` b/w Queen(class) and nymphs(objects)
+ - private, public, static, final...
  
-> 1> instance variable (object)
+> __1> instance variable__ (is it an object?)
 ```
 public class Counter {
-      private int **value**;
+      // this is the instance variable. It's a property of the baby objects.
+      private int **eye**;
 ```      
-: it stores the data of a **class_object**.
- - it should always be `private` unless it is a **constant**(generally accepted).
+: instance_variables store the data of a **class_object**.
+ - instance_variable should always be `private` unless it is a **constant**(generally accepted).
  - Each **class_object** has its own set of instance variables. 
  - How to declare instance variable? :
    - `private`: accessor(modifier)
    - `int`: type declaration
-   - `**value**`: object identifier ??????????????????????????????????????????????????????????
+   - `**eye**`: object_property. It will be called when `object_identifier.eye`
    
-> 2> constructor (object)
- - It initializes the instance(object) variables.
+> __2> constructor__ (method)
+ - It initializes the instance variables.
  - A constructor is also considered as a method, so constructor overloading is allowed. 
  - Constructor name is the class name, and all constructors of a class have the same name(with different parameters).
- - Constructor body is executed when new object is created(initialized).
-# When referring to an instance variable in a constructor, the compiler automatically applies it to the `this` reference ?
+ - Constructor body is executed when new object is created(initialized) in the `Main.java`.
 ```
 public class Counter {
-      // this is the instance variable
-      private int **value**;
+      private int **eye**;
       
       // writing a constructor, this is called 'public interface'
+      // 'this' referring the object identifiersss that will be generated in the Main.java in the future.
       public Counter() {
-            this.value = 0; }
-      public Counter(double init_value) {
-            this.value = init_value; }
+            this.eye = 0; }
+      public Counter(double init_eye) {
+            this.eye = init_eye; }
 ```
 'public interface' specifies what you can do with the objects of a class. The**public constructors and methods** of a class form the public interface of the class. 
 
 > 3> methods 
  - instance variables can only be accessed by **methods** of the same class.
-# When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference ?
+ - When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference ?
 ```
 public class Counter {
-      private int **value**;
-       
+      private int **eye**;
+      public Counter() {
+            this.eye = 0; }
+      public Counter(double init_eye) {
+            this.eye = init_eye; }
+            
       // writing methods, this is called 'pubic interface'
       public void count() {
-            value = value + 1; }
+            eye = eye + 1; } //no return, but execute
       public void reset() {
-            value = 0; }
-      public int getValue() {
-            return value; }
+            eye = 0; }       //no return, bur execute
+      public int getEye() {
+            return eye; }    //return sth
 ```
-
-
-
-
-
-
+<img src="https://user-images.githubusercontent.com/31917400/45927098-9f2cab00-bf25-11e8-993f-0f3578cefb98.jpg" />
 
 
 ### Data types
@@ -220,15 +222,15 @@ public class Math {
 ```
 > **object value** and `static`and `final`
  - __accessible by what?__ 
- - object value (created by User) can be manipulated by calling **methods** by User, and accessible by object ???: `fun.talk()`???
+ - object value (created by User by initialization) can be manipulated by calling **methods** by User, and accessible by object.
  - tagged by `static`, it becomes a **class variable** only accessible by **class_name**: `Human.GOD` 
  - Otherwise, it's an **instance variable** accessible by **object**: `man.age`
- - tagged by `final`, the value just **cannot be modified**, and still accessible by **class_name**: `Human.God`
+ - tagged by `final`, the value just **cannot be modified**, and still accessible by **class_name**: `Human.God` coz it's a static(class) constant variable just like `Math.PI` which is 3.14
 ```
 public class Human {
      private double fun;                 // fun is an instance variable
      private int age;                    // age is an instance variable 
-     public static final int GOD = 0;   // GOD is an class variable
+     public static final int GOD = 0;   // GOD is an class(static) constant variable
      
      Human man = new Human();           // object 
      Human woman = new Human();         // object
