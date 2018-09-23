@@ -187,10 +187,10 @@ public class Counter {
       public Counter(double init_eye) {
             this.eye = init_eye; }
 ```
-'public interface' specifies what you can do with the objects of a class. The**public constructors and methods** of a class form the public interface of the class. 
+'public interface' specifies what you can do with the objects of a class. The **public constructors and methods** of a class form the public interface of the class. 
 
 > 3> methods 
- - instance variables can only be accessed by **methods** of the same class.
+ - **instance variables** can only be accessed by **methods** of the same class.
  - When you refer to an instance variable in a method, the compiler automatically applies it to the `this` reference ?
 ```
 public class Counter {
