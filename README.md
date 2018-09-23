@@ -74,20 +74,20 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 
 
 
-
+################################################################################################################
 ## [concept]
 
 __# What is **class**?__
  - objects
  - methods
-> Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `System.out.println()`. Class determines legal methods.
+> Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `PrintStream` class allows `System.out` object to `println(), or print(), etc`. Class determines legal methods.
 
 > **Overloaded method**: when a class declares multiple methods with the same name, but different parameters. 
  
 __# What is **type**?__
  - primitive type
- - object_class type
-> Type define **values** or **class_object**(operation) that would be carried out on the values. Note that `int, double, long, String, PrintStream, etc...` those types also have **classes** such as `Integer, Double, Long, String, PrintStream, etc...`. 
+ - class_object type
+> Type define **values** or **class_object**(operation) that would be carried out on the values. Note that `int, double, long, String, PrintStream, etc...` those types also have their own **classes** such as `Integer, Double, Long, String, PrintStream, etc...`. 
 
 > pure numbers(int, double, long, etc) are not **class_object** but **primitive** types. 
 ```
@@ -113,7 +113,7 @@ __# What is **writing a variable**?__
 > name of variable or method or object or class: **identifier**
  - then method is a variable?????????????????????????????????????????????
  - then object(instance) is a variable????????????????????????????????????????????????????
- - then class ia a variable?????????????????????????????????????????????????? 
+ - then class_object is a variable?????????????????????????????????????????????????? 
 
 > so...It is an error to use an identifier that has never had a value assigned to it.
 ```
@@ -154,7 +154,7 @@ __# What is **API** documentation?__
  - Package: a collection of classes with a related purpose
 
 # ok
-__how to declare a class?__ creating a class_object...
+__how to declare a class?__ let's create a class_object...
  
 > 1> instance variable (object)
 ```
@@ -167,14 +167,14 @@ public class Counter {
  - How to declare instance variable? :
    - `private`: accessor(modifier)
    - `int`: type declaration
-   - `**value**`: variable name
+   - `**value**`: object identifier ??????????????????????????????????????????????????????????
    
-> 2> constructors (object)
- - it initializes the instance variables.
- - Constructor name is class name, and all constructors of a class have the same name(with different parametors).
- - Constructor body is executed when new object is created.
-# When you refer to an instance variable in a constructor, the compiler automatically applies it to the `this` reference ?
-
+> 2> constructor (object)
+ - It initializes the instance(object) variables.
+ - A constructor is also considered as a method, so constructor overloading is allowed. 
+ - Constructor name is the class name, and all constructors of a class have the same name(with different parameters).
+ - Constructor body is executed when new object is created(initialized).
+# When referring to an instance variable in a constructor, the compiler automatically applies it to the `this` reference ?
 ```
 public class Counter {
       // this is the instance variable
