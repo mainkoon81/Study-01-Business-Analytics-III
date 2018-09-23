@@ -80,7 +80,7 @@ __Polymorphism__: Polymorphism is the mechanism that allows actions to act diffe
 __# What is **class**?__
  - objects
  - methods
-> Entity that contains objects and methods. Class regulates and limits its methods. so Class declares the methods that you can apply to its objects. For example, `PrintStream` class allows `System.out` object to `println(), or print(), etc`. Class determines legal methods.
+> Entity that contains objects and methods. Class determines legal methods. Class declares the methods that you can apply to its objects. For example, `PrintStream` class allows `System.out` object to `println(), or print(), etc`. `Class is a type.`
 
 > **Overloaded method**: when a class declares multiple methods with the same name, but different parameters. 
  
@@ -93,14 +93,11 @@ __# What is **type**?__
 ```
 int num = 19;  // 'num' is not an object.
 ```
-> String, PrintStream are **class_object** types. For example, the object `System.out` belongs to a class_object type called **printStream**.
 
 __# What is **object**?__
 > Entity that should be manipulated by calling methods.
 
-> Each object belongs to a class. For example, the object `System.out` belongs to a class called **printStream**.
-
-> For example, this is an object that belongs to a class called 'String'.
+> Each object belongs to a class. For example, the object `System.out` belongs to a class called PrintStream. This is an object that belongs to a class called 'String'.
 ```
 String name = "Minkun";  // 'name' object belongs to 'Sting' class.
 ```
