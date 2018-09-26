@@ -254,8 +254,9 @@ System.out.println(j);  //? 0
 System.out.println(k);  //? 2
 ```
 
-
-
+### Array
+`int[] IntArray = new int[length];` When we create an primitive type values such as `int x` and `int y`, taking up 4byte each, our OS randomly selects the location of the memory spaces while we create an array, every values belongs to `int[] x` are stored consecutively one after another. That's why our array entities need to have a consistent type(because of `char: 2byte, int: 4byte, double: 8byte`).   
+<img src="https://user-images.githubusercontent.com/31917400/46072012-350c4400-c179-11e8-9bbd-1fa78d9eca6e.jpg" />
 
 
 
