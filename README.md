@@ -255,8 +255,66 @@ System.out.println(k);  //? 2
 ```
 
 ### Array
-`int[] IntArray = new int[length];` When we create an primitive type values such as `int x` and `int y`, taking up 4byte each, our OS randomly selects the location of the memory spaces while we create an array, every values belongs to `int[] x` are stored consecutively one after another. That's why our array entities need to have a consistent type(because of `char: 2byte, int: 4byte, double: 8byte`).   
-<img src="https://user-images.githubusercontent.com/31917400/46072012-350c4400-c179-11e8-9bbd-1fa78d9eca6e.jpg" />
+`int[] IntArray = new int[length];` When we create an primitive type values such as `int x` and `int y`, taking up 4byte each, our OS randomly selects the location of the memory spaces while we create an array, every values belongs to `int[] x` are stored consecutively one after another. That's why our array entities need to have a consistent type(because of `char: 2byte, int: 4byte, double: 8byte`). Plus, it is a good idea to use a named constant. 
+```
+final int myLength = 10;
+int[] IntArray = new int[myLength];
+```
+<img src="https://user-images.githubusercontent.com/31917400/46072374-1e1a2180-c17a-11e8-9785-732a4c82084d.jpg" />
+
+> Do not reorganize Parallel arrays(two arrays) into an array of objects. Look at this mapping case.
+```
+String[] cities = {"Dublin", "London", "Paris"};
+int[] population = {4, 8, 6];
+for (int i=0; i<cities.length; i++) {
+   System.out.println(cities[i] + "=" + population[i]; }
+```
+Dublin=4, London=8, Paris=6 ? Nope!!!! What if the value changes? That's why we need to create **class object**. 
+```
+public class City {
+    private String name;
+    private int population;
+
+    //constructor
+    public City(String name, int population){
+        this.name = name;
+        this.population = population;
+    }
+
+    //method
+    public String showName(){
+        return this.name;
+    }
+    public int showNum(){
+        return this.population;
+    }
+
+}
+##############################################################################################
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        City city_1 = new City("Dublin", 4); //this is what we want: object
+        City city_2 = new City("London", 8); //this is what we want: object
+        City city_3 = new City("Paris", 6); //this is what we want: object
+
+        //u know what?  cannot access property : city_1.name; meh meh..that's why we need methods
+
+        //System.out.println(city_1.showName());
+
+        //make a custom class arrays
+        City[] cities = new City[3]; //initialization
+        cities[0] = city_1; //store the object
+        cities[1] = city_2; //store the object
+        cities[2] = city_3; //store the object
+
+        for(int i=0; i<cities.length; i++) {
+            System.out.print(cities[i].showName() + ", " + cities[i].showNum() + " / ");
+        }
+```
+Dublin, 4 / London, 8 / Paris, 6 /
 
 
 
