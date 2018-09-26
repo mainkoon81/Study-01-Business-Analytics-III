@@ -255,7 +255,7 @@ System.out.println(k);  //? 2
 ```
 
 ### Array
-`int[] IntArray = new int[length];` When we create an primitive type values such as `int x` and `int y`, taking up 4byte each, our OS randomly selects the location of the memory spaces while we create an array, every values belongs to `int[] x` are stored consecutively one after another. That's why our array entities need to have a consistent type(because of `char: 2byte, int: 4byte, double: 8byte`). Plus, it is a good idea to use a named constant. 
+`int[] IntArray = new int[length];` `String[][] board = new String[ROWS][COLUMNS];` When we create an primitive type values such as `int x` and `int y`, taking up 4byte each, our OS randomly selects the location of the memory spaces while we create an array, every values belongs to `int[] x` are stored consecutively one after another. That's why our array entities need to have a consistent type(because of `char: 2byte, int: 4byte, double: 8byte`). Plus, it is a good idea to use a named constant. 
 ```
 final int myLength = 10;
 int[] IntArray = new int[myLength];
@@ -318,14 +318,74 @@ public class Main {
 Dublin, 4 / London, 8 / Paris, 6 /
 
 ### Arraylist
+`ArrayList<type> identifier = new ArrayList<type>();`
 
 So what's the problem?
  - 1> Stricktly typed: the entity types should be consistent
    - Solution: make a custumized class to create an independent array object.
+   - so..each entity in an array is **object** born from the class!!!!
  - 2> fixed length: what if we don't know how many entities will be stored in the array?
    - Solution: **Arraylist**
    
-`ArrayList<type> identifier = new ArrayList<type>();` Arraylist Can grow and shrink as needed! **ArrayList class** supplies methods for many common tasks, such as `object.size()`, `object.add(index, "sth")`, `object.remove(index)`, `object.set(index, "sth")`, `object.get(index)`, etc.
+Arraylist Can grow and shrink as needed! **ArrayList class** supplies methods for many common tasks, such as `object.size()`, inserting:`object.add(index, "sth")`, `object.remove(index)`, replacing:`object.set(index, "sth")`, `object.get(index)`, etc.
+```
+public class BankAccount {
+    //instance variables
+    private int accountNum;
+    private double balance;
+
+    //Construct a bank account with a zero balance
+    public BankAccount(int anAccountNumber) {
+        this.accountNum = anAccountNumber;
+        this.balance = 0;
+    }
+
+    //constructor overloading
+    //Constructs a bank account with a given balance
+    public BankAccount(int anAccountNumber, double initialBalance) {
+        this.accountNum = anAccountNumber;
+        this.balance = initialBalance;
+    }
+
+    //methods
+    //Gets the account number of this bank account
+    public int getAccountNum() {
+        return this.accountNum;
+    }
+    //Deposits money into the bank account.
+    public void deposit(double amount) {
+        this.balance = this.balance + amount;
+    }
+    //Withdraws money from the bank account.
+    public void withdraw(double amount) {
+        this.balance = this.balance - amount;
+    }
+    //Gets the current balance of the bank account.
+    public double getBalance() {
+        return this.balance;
+    }
+}
+
+##############################################################################################
+public class Main {
+    public static void main(String[] args) {
+        //empty arraylist
+        ArrayList<BankAccount> superAccount = new ArrayList<BankAccount>();
+        
+        //add the object
+        BankAccount you = new BankAccount(1001);
+        superAccount.add(you);
+        BankAccount me = new BankAccount(1015);
+        superAccount.add(me);
+        superAccount.remove(0);
+
+        System.out.println("Size: " + (superAccount.size()));
+        System.out.println(superAccount.get(1).getAccountNum());
+```
+> To collect numbers(with primitive types) in an array list, we use the wrapper type(`Integer`, `Double`, etc) as the type parameter, but storing wrapped numbers is quite inefficient..coz each number is a big object. 
+
+
+
 
 
 
