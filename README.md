@@ -262,14 +262,15 @@ int[] IntArray = new int[myLength];
 ```
 <img src="https://user-images.githubusercontent.com/31917400/46072374-1e1a2180-c17a-11e8-9785-732a4c82084d.jpg" />
 
-> Do not reorganize Parallel arrays(two arrays) into an array of objects. Look at this mapping case.
+> Do not reorganize Parallel arrays(two arrays with different type) into an array of objects. Look at this mapping case.
 ```
 String[] cities = {"Dublin", "London", "Paris"};
 int[] population = {4, 8, 6];
 for (int i=0; i<cities.length; i++) {
    System.out.println(cities[i] + "=" + population[i]; }
 ```
-Dublin=4, London=8, Paris=6 ? Nope!!!! What if the value changes? That's why we need to create **class object**. 
+Dublin=4, London=8, Paris=6 ? Nope!!!! What if the value changes? That's why.. 
+## we need to create **class object**. 
 ```
 public class City {
     private String name;
@@ -316,6 +317,15 @@ public class Main {
 ```
 Dublin, 4 / London, 8 / Paris, 6 /
 
+### Arraylist
+
+So what's the problem?
+ - 1> Stricktly typed: the entity types should be consistent
+   - Solution: make a custumized class to create an independent array object.
+ - 2> fixed length: what if we don't know how many entities will be stored in the array?
+   - Solution: **Arraylist**
+   
+`ArrayList<type> identifier = new ArrayList<type>();` Arraylist Can grow and shrink as needed! **ArrayList class** supplies methods for many common tasks, such as `object.size()`, `object.add(index, "sth")`, `object.remove(index)`, `object.set(index, "sth")`, `object.get(index)`, etc.
 
 
 
