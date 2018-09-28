@@ -255,7 +255,7 @@ System.out.println(k);  //? 2
 ```
 
 ### Array
-`int[] IntArray = new int[length];` `String[][] board = new String[ROWS][COLUMNS];` When we create an primitive type values such as `int x` and `int y`, taking up 4byte each, our OS randomly selects the location of the memory spaces while we create an array, every values belongs to `int[] x` are stored consecutively one after another. That's why our array entities need to have a consistent type(because of `char: 2byte, int: 4byte, double: 8byte`). Plus, it is a good idea to use a named constant. 
+`int[] IntArray = new int[length];` `String[][] board = new String[ROWS][COLUMNS];` When we create an primitive type integer values such as `int x` and `int y`, taking up 4byte each, our OS randomly selects the location of the memory spaces while we create an array, every values belongs to `int[] x` are stored consecutively one after another. That's why our array entities need to have a consistent type(because of `char: 2byte, int: 4byte, double: 8byte`). Plus, it is a good idea to use a named constant. 
 ```
 final int myLength = 10;
 int[] IntArray = new int[myLength];
