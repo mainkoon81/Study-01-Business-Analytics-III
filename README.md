@@ -273,6 +273,7 @@ Dublin=4, London=8, Paris=6 ? Nope!!!! What if the value changes? That's why..
 ## we need to create **class object**. 
 ```
 public class City {
+    //introduce properties
     private String name;
     private int population;
 
