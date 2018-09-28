@@ -303,10 +303,9 @@ public class Main {
         City city_3 = new City("Paris", 6); //this is what we want: object
 
         //u know what?  cannot access property : city_1.name; meh meh..that's why we need methods
+        System.out.println(city_1.showName());
 
-        //System.out.println(city_1.showName());
-
-        //make a custom class arrays
+        //make a custom class arrays wow....
         City[] cities = new City[3]; //initialization
         cities[0] = city_1; //store the object
         cities[1] = city_2; //store the object
