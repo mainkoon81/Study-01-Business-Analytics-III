@@ -384,9 +384,79 @@ public class Main {
 ```
 > To collect numbers(with primitive types) in an array list, we use the wrapper type(`Integer`, `Double`, etc) as the type parameter, but storing wrapped numbers is quite inefficient..coz each number is a big object. 
 
+### Common Array Algorithm
+> Filling (arraylist)
+ - Fill an array with zeroes then fill an array-list with squares
+```
+ArrayList<Integer> arrLt = new ArrayList<Integer>(); //object
+arrLt.add(0, 45); arrLt.add(1, 25); arrLt.add(2, 38); 
+for(int i=0; i<arrLt.size(); i++) { 
+    arrLt.set(i, i*i); }
+```
+> Sum and AVG (arraylist)
+ -  compute the sum of all elements for array-list and obtain AVG
+```
+double total = 0;
+for(i : arrLt) {
+    total += i; }
+double AVG = total / arrLt.size();
+```
+> Counting matches (arrayList)
+ - Count the number of accounts whose balance is at least as much as a **given threshold**
+```
+public class Bank {    
+    private ArrayList<BankAccount> arrLt; 
+    
+    public int count(double atLeast){
+        int matches = 0;       
+        for (BankAccount i : arrLt){          
+            if(i.getBalance() >= atLeast){
+                matches++; } 
+        } //????
+        return matches; }
+    }
+```
+> Max and Min
+ -  Find the account with the largest balance in the bank
+```
+BankAccount WhatMax = arrLt.get(0); //initialize a candidate
+
+for(int i=1; i<arrLt.size(); i++) {
+    BankAccount a = arrLt.get(i);
+    if(a.getBalance() > WhatMax.getBalance){
+        WhatMax = a; } 
+}
+```
+> Searching
+ -  Determine whether there is a bank account with a particular account number in the bank..**Writing a new class?**
+```
+public class Bank(int account_number) {
+    for(BankAccount i : arrLt){
+        if(i.getAccountNumber()==account_number){
+            return i; }
+    return null; }
+    .
+    .
+```
+> Locating
+ - Find the position of an element so that you can replace or remove it. Find the position of the first element that is larger than 100.
+```
+int position = 0;
+boolean found = false;
+while(position < arrLt.size() && !found) {
+    if(arrLt.get(position)>100){
+        found = true; }
+    else {position++; }
+```
+> Removing, Inserting
+ - 
 
 
+> Copying an Array
 
+> Growing an Array
+
+> Printing "|" separators
 
 
 
