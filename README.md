@@ -460,7 +460,7 @@ while(position < arrLt.size() && !found) {
 <img src="https://user-images.githubusercontent.com/31917400/46243070-9de8fb80-c3c7-11e8-9f66-053bac2af715.jpg" />
 
 > In the Interface file 
- - Interface is a type. A Java interface is a bit like a class, except a Java interface can only contain **method signatures** and **fields**. A Java interface cannot contain an **implementation** of the methods, only the signature (headers, name, parameters and exceptions) of the method. This interface is called 'Measurable'. Then where do we write the implementation of the method? 
+ - Interface is a type. A Java interface is a bit like a class, except a Java interface can only contain **method signatures**(headers, name, parameters and exceptions) and **fields**. A Java interface cannot contain an **implementation** of the methods. Then where do we write the implementation of the method? Where is our `interface_type object` created? And where is our `interface_type object`(replacing all kinds of other class_type objects) utilized? 
  - All methods in an interface are public.(so always automatically public)
 ```
 public interface Measurable { 
