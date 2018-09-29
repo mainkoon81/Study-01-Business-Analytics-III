@@ -480,7 +480,7 @@ public static double AVG(Measurable[] objects) {
     else {return 0; }
 ```
 > Class files
- - Then, what a class must do to make its objects 'Measurable_type'? How to accept the Measurable_type? How to implement the interface type? 
+ - Then, what a class must do to make its objects 'Measurable_type'? How to accept the Measurable_type? How to implement the interface_ type? 
  - We write the implementation of the interface method in the class. 
 ```
 //in the class header, add implements + 'interface_name'
@@ -492,9 +492,10 @@ public class 'class_name' implements 'interface_name' {
     ..........implementation
     }
 ```
- - Once the class implements the interface type, the class objects are instances of the interface type such as `'interface_name' 'obj_name' = new 'class_name'();`  
-
- - 
+> In the 'Main.java'
+ - Once the class implements the interface type, the class objects are instances of the interface_type such as `'interface_name' 'obj_name' = new 'class_name'();`
+ 
+ 
 
 
 
