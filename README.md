@@ -459,7 +459,7 @@ while(position < arrLt.size() && !found) {
 ### Interface for algorithm reuse
 <img src="https://user-images.githubusercontent.com/31917400/46243070-9de8fb80-c3c7-11e8-9f66-053bac2af715.jpg" />
 
-> Interface file 
+> In the Interface file 
  - Interface is a type. A Java interface is a bit like a class, except a Java interface can only contain **method signatures** and **fields**. A Java interface cannot contain an **implementation** of the methods, only the signature (headers, name, parameters and exceptions) of the method. This interface is called 'Measurable'. Then where do we write the implementation of the method? 
  - All methods in an interface are public.(so always automatically public)
 ```
@@ -467,7 +467,7 @@ public interface Measurable {
     //method signature
     public double getMeasure();  }
 ```
-> Algorithm file
+> In the Algorithm file
  - Now that we have a type that denotes measurability, we can implement a reusable algorithm(method). This method is useful for objects of any class that conforms to the Measurable interface(type). 
  -  In this example, the algorithm takes an array object that has the interface type.   
 ```
@@ -479,7 +479,7 @@ public static double AVG(Measurable[] objects) {
         return sum / objects.length; }
     else {return 0; }
 ```
-> Class files
+> In the Class files
  - Then, what a class must do to make its objects 'Measurable_type'? How to accept the Measurable_type? How to implement the interface_ type? 
  - We write the implementation of the interface method in the class. 
 ```
