@@ -476,6 +476,7 @@ __Rule:__ We want to recycle the algorithm. What we need are `1)class file, 2)in
 
 > In the Interface file(a port) 
  - Technically, it's an interface file. 
+ - It is simply saying like `"Hey, to use our master algorithm, our all object_types will be replaced with this one **single interface_type** and its interface object method will be newly-added and implemented in each class file, then the history would happen in the algorithm file."` 
  - A Java interface is a bit like a class, except it can only contain **method signatures**(headers, name, parameters and exceptions) and **fields** without implementation(that's why it's an **abstract method**). We'll call this interface file 'Measurable' and write a method(algorithm) signature.  
  - All methods in an interface are public(so automatically public).
 ```
@@ -542,7 +543,7 @@ public class Main {
         objs[0] = new BankAccount(11223344, 1000);
         objs[1] = new BankAccount(66553343, 2345);
         objs[2] = new BankAccount(66553345, 21313);
-        System.out.println(AVG.average(objs)); // now we use the algorithm
+        System.out.println(AVG.average(objs)); // This is the moment we use the algorithm
         
         // objects
         Country[] countries = new Country[3];
@@ -555,7 +556,7 @@ public class Main {
         ctr[0] = new Country("Ireland", 50);
         ctr[1] = new Country("Korea", 100);
         ctr[2] = new Country("India", 120);
-        System.out.println(AVG.average(ctr)); // now we use the algorithm
+        System.out.println(AVG.average(ctr)); // This is the moment we use the algorithm
 ```
 
  
