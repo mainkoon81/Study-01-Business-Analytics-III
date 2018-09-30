@@ -476,7 +476,7 @@ __Rule:__ We want to recycle the algorithm. What we need are `1)class file, 2)in
 
 > In the Interface file(a port) 
  - Technically, it's an interface file. 
- - A Java interface is a bit like a class, except it can only contain **method signatures**(headers, name, parameters and exceptions) and **fields** without implementation(**abstract method**). We'll call this interface file 'Measurable' and write a method(algorithm) signature.  
+ - A Java interface is a bit like a class, except it can only contain **method signatures**(headers, name, parameters and exceptions) and **fields** without implementation(that's why it's an **abstract method**). We'll call this interface file 'Measurable' and write a method(algorithm) signature.  
  - All methods in an interface are public(so automatically public).
 ```
 public interface Measurable { 
