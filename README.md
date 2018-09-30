@@ -459,42 +459,55 @@ while(position < arrLt.size() && !found) {
 ### Interface for algorithm reuse
 <img src="https://user-images.githubusercontent.com/31917400/46243070-9de8fb80-c3c7-11e8-9f66-053bac2af715.jpg" />
 
-> In the Interface file 
- - Interface is a type. A Java interface is a bit like a class, except a Java interface can only contain **method signatures**(headers, name, parameters and exceptions) and **fields**. 
- - A Java interface cannot contain an **implementation** of the methods. Then where do we write the implementation of the method? (in every class file?) Where is our `interface_type object` created? (in Main.java file?) And where is our `interface_type object`(replacing all kinds of other class_type objects) utilized? (in algorithm file?)
+## So what's the story?
+__Rule:__ We want to recycle the algorithm. What we need are `1)class file, 2)interface file, 3)algorithm file, 4)Main file`. How factories(classes) interact with the Ship(the target algorithm)? **We might need a port(an interface file)**.
+ 
+> Q. Then where do we write the implementation of the method? (in every class file? Nope.) Where is our `interface_type object` created? (in Main.java file?) And where is our `interface_type object`(replacing all kinds of other class_type objects) utilized? (in algorithm file?). 
+ 
+ > In the Class files(factories)
+ - Here, we design a queen's womb for procreating objects(instance variables(object), constructors(method), instance methods(method)), and queen's body that consists of objects and methods(static variables, static methods). Eventually, in the Main file, queen's objects will be initialized. When it comes to the all methods in the class files, they provide information about objects(baby: incomplete, individual properties) and class_objects(queen: complete, shared, fixed properties, or constants). If we want to make comparison between objects, or to create sth, using objects, we should write method_implementation in the Main file. 
+ 
+> In the 'Main.java'
+ - Technically, it's a class file.
+ - In the Main file, let's say, we found that different classes gave birth to different groups of objects then they are contributing to creating sth, but these creations are sharing the same algorithm.  
+<img src="https://user-images.githubusercontent.com/31917400/46251420-f9f46400-c449-11e8-8aa9-abcf81801f33.jpg" />
+
+ - In this case, we throw away these methods from this Main file. Instead, we create **new algorithm file separately** and write a single method implementation (need to be hinted at by **interface file**) in the our algorithm file.    
+
+> In the Interface file(a port) 
+ - Technically, it's an interface file. 
+ - A Java interface is a bit like a class, except it can only contain **method signatures**(headers, name, parameters and exceptions) and **fields**. It cannot have mothod implementations. We'll call this interface file 'Measurable' and write a method(algorithm) signature. It looks like a class without implementation. 
  - All methods in an interface are public(so automatically public).
 ```
 public interface Measurable { 
     //method signature
     public double getMeasure();  }
 ```
-> In the Algorithm file
- - Now that we have a type that denotes measurability, we can implement a reusable algorithm(method). This method is useful for objects of any class that conforms to the Measurable interface(type). 
- -  In this example, the algorithm takes an array object that has the interface type.   
+
+> In the Algorithm file(a ship)
+ - Technically, it's also a class file. 
+ - The implementation starts here. Now that we have an interface type that denotes measurability, we can implement a reusable algorithm(method). This method is useful for objects of any class that conforms to the Measurable interface(type). 
+ - How this file connects to the interface file? The algorithm method uses the `interface_object's name` as its parameter and the `interface_ method's name` as the interface_object's method. We removed lots of methods in the Main file. Here, we conjure them with using a single method...POLYMORPHISM.
+ - In this example, the algorithm takes an array object that has the interface type.   
 ```
-public static double AVG(Measurable[] objects) {
-    double sum = 0;
-    for(Measurable i : objects) {
-        sum = sum + i.getMeasure();  }//Here, we r using 'getMeasure()' we registered in the interface file. 
-    if(objects.length > 0) {
-        return sum / objects.length; }
-    else {return 0; }
-```
-> In the Class files
- - Then, what a class must do to make its objects 'Measurable_type'? How to accept the Measurable_type? How to implement the interface_ type? 
- - We write the implementation of the interface method in the class. 
-```
-//in the class header, add implements + 'interface_name'
-public class 'class_name' implements 'interface_name' {
-    //implementing methods of interface.
-    public 'type' 'func_name from interface' {
-    ....................
-    ...............
-    ..........implementation
+public class AVG {
+    // algorithm signature and implementation
+    public static double average(Measurable[] objects){
+        double sum = 0;
+        for(Measurable i : objects){
+            sum = sum + i.getMeasure(); //Here, we r using 'getMeasure()' we registered in the interface file. 
+        }
+        if(objects.length>0) {return sum/objects.length;}
+        else {return 0;}
     }
+}
 ```
-> In the 'Main.java'
- - Once the class implements the interface type, the class objects are instances of the interface_type such as `'interface_name' 'obj_name' = new 'class_name'();`
+
+> Back to the class files(factories)
+ - 
+
+
+
  
  
 
