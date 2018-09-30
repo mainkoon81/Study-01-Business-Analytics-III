@@ -457,12 +457,12 @@ while(position < arrLt.size() && !found) {
 > Printing "|" separators
 
 ### Interface for algorithm reuse
-<img src="https://user-images.githubusercontent.com/31917400/46243070-9de8fb80-c3c7-11e8-9f66-053bac2af715.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/46256117-4bc6d980-c49e-11e8-9236-f70a9be5f527.jpg" />
 
 ## So what's the story?
-__Rule:__ We want to recycle the algorithm. What we need are `1)class file, 2)interface file, 3)algorithm file, 4)Main file`. How factories(classes) interact with the Ship(the target algorithm)? **We might need a port(an interface file)**.
+__Rule:__ We want to recycle the algorithm. What we need are `1)class file, 2)interface file, 3)algorithm file, 4)Main file`. How `factories(classes)` interact with the `Ship(the target algorithm)`? **We might need a `port(the interface file)`**.
  
-> Q. Then where do we write the implementation of the method? (in every class file? Nope.) Where is our `interface_type object` created? (in Main.java file?) And where is our `interface_type object`(replacing all kinds of other class_type objects) utilized? (in algorithm file?). 
+> Q. Then where do we write the implementation of the new method(algorithm)? (in the algorithm class?). To utilize the algorithm, we need to create `interface_type` objects. Where is our `interface_type` objects created and initialized? (in Main.java file?) And where is our `interface_type` object(replacing all kinds of other class_type objects) utilized? (in Main.java file?). 
  
  > In the Class files(factories)
  - Here, we design a queen's womb for procreating objects(instance variables(object), constructors(method), instance methods(method)), and queen's body that consists of objects and methods(static variables, static methods). Eventually, in the Main file, queen's objects will be initialized. When it comes to the all methods in the class files, they provide information about objects(baby: incomplete, individual properties) and class_objects(queen: complete, shared, fixed properties, or constants). If we want to make comparison between objects, or to create sth, using objects, we should write method_implementation in the Main file. 
@@ -531,27 +531,31 @@ public class Main {
     public static void main(String[] args) {
         ......
         ......
+        // objects
         BankAccount[] objects = new BankAccount[3];
         objects[0] = new BankAccount(11223344, 1000);
         objects[1] = new BankAccount(66553343, 2345);
         objects[2] = new BankAccount(66553345, 21313);
         
+        // interface_type objects
         Measurable[] objs = new Measurable[3];
         objs[0] = new BankAccount(11223344, 1000);
         objs[1] = new BankAccount(66553343, 2345);
         objs[2] = new BankAccount(66553345, 21313);
-        System.out.println(AVG.average(objs));
+        System.out.println(AVG.average(objs)); // now we use the algorithm
         
+        // objects
         Country[] countries = new Country[3];
         countries[0] = new Country("Ireland", 50);
         countries[1] = new Country("Korea", 100);
         countries[2] = new Country("India", 120);
         
+        // interface_type objects
         Measurable[] ctr = new Measurable[3];
         ctr[0] = new Country("Ireland", 50);
         ctr[1] = new Country("Korea", 100);
         ctr[2] = new Country("India", 120);
-        System.out.println(AVG.average(ctr));
+        System.out.println(AVG.average(ctr)); // now we use the algorithm
 ```
 
  
