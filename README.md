@@ -472,7 +472,7 @@ __Rule:__ We want to recycle the algorithm. What we need are `1)class file, 2)in
  - In the Main file, let's say, we found that different classes gave birth to different groups of objects then they are contributing to creating sth, but these creations are sharing the same algorithm.  
 <img src="https://user-images.githubusercontent.com/31917400/46251420-f9f46400-c449-11e8-8aa9-abcf81801f33.jpg" />
 
-## In this case, we throw away these methods from this Main file. Instead, we create **new algorithm file separately** and write a single method implementation (need to be hinted at by **interface file**) in the our algorithm file.    
+## In this case, we throw away these methods from this Main file. Instead, we create **new algorithm file separately** and write a single method implementation (need to be hinted at by **interface file**) in the algorithm file.    
 
 > In the Interface file(a port) 
  - Technically, it's an interface file. 
