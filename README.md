@@ -559,11 +559,15 @@ public class Main {
         System.out.println(AVG.average(ctr)); // This is the moment we use the algorithm
 ```
 
- 
- 
-
-
-
+### Exception Handling
+There are two aspects to dealing with **program errors** `detection` and `handling`. In Java, exception handling provides a flexible mechanism for passing control from the point of error detection to a handler that can deal with the error. 
+> **Throwing Exceptions**
+ - When you detect an error condition, your job is really easy: `Throw an appropriate **exception_object**!`. For example,  
+```
+if (amount > balance) {   // Now what? }
+```
+ - First look for an appropriate **exception_class**. The Java library provides many classes to signal all sorts of exceptional conditions. 
+<img src="https://user-images.githubusercontent.com/31917400/46553308-1c1c3500-c8d5-11e8-875c-640c43519dba.jpg" />
 
 
 
