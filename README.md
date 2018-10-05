@@ -656,9 +656,9 @@ Here our catch block captures an exception which occurs because we are trying to
 
 > **Checked Exception**
  - The exceptions that you can throw and catch fall into three categories.
-   - 1)`Internal errors` are reported by descendants of the type Error. One example is the `OutOfMemoryError`, which is thrown when all available computer memory has been used up. These are fatal errors that happen rarely. 
-   - 2)Descendants of `RuntimeException`, such as as `IndexOutOfBoundsException` or `IllegalArgumentException` indicate errors in your code. They are called `unchecked exceptions`.
-   - 3)All other exceptions are checked exceptions. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
+   - 1)`Internal errors` are reported by descendants of the type Error. One example is the **OutOfMemoryError**, which is thrown when all available computer memory has been used up. These are fatal errors that happen rarely. 
+   - 2)Descendants of RuntimeException, such as as **IndexOutOfBoundsException** or **IllegalArgumentException** indicate errors in your code. They are called `unchecked exceptions`.
+   - 3)All other exceptions are `checked exceptions`. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
 
 
 
