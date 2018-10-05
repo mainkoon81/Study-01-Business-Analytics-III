@@ -562,17 +562,73 @@ public class Main {
 ### Exception Handling
 There are two aspects to dealing with **program errors** `detection` and `handling`. In Java, exception handling provides a flexible mechanism for passing control from the point of error detection to a handler that can deal with the error. 
 > **Throwing Exceptions**
- - When you detect an error condition, your job is really easy: `Throw an appropriate **exception_object**!`. For example,  
+ - When you detect an error condition, your job is really easy: **Throw an appropriate **exception_object**!**. For example,  
 ```
-if (amount > balance) {   // Now what? }
+if (amount > balance) { // Now what? }
 ```
  - First look for an appropriate **exception_class**. The Java library provides many classes to signal all sorts of exceptional conditions. 
-<img src="https://user-images.githubusercontent.com/31917400/46553308-1c1c3500-c8d5-11e8-875c-640c43519dba.jpg" />
+ - Seemingly, Is it an `arithmetic error` to have a negative balance? Nope! Java can deal with negative numbers. Is the amount to be withdrawn illegal? Indeed it is. It is just too large. Therefore, let’s throw an `IllegalArgument Exception`. To signal an exceptional condition, use the `throw` statement to throw an **exception object**!  
+<img src="https://user-images.githubusercontent.com/31917400/46554141-3f47e400-c8d7-11e8-8014-50ce7fc828ec.jpg" />
 
+ - When you throw an exception, execution does not continue with the next statement but with an **exception handler** ONLY.
 
+### Catching Exception
+Every exception should be handled somewhere in your program. If an exception has no handler, an **error message is printed, and your program terminates**. You can handle exceptions with the **`try/catch` statement**. Place the statement into a location of your program that knows how to handle a particular exception. 
+ - The `try` block contains one or more statements that may **cause an exception** of the kind that you are willing to handle. 
+ - Each `catch` clause contains the **handler for an exception type**.
+```
+try {
+    statement...
+    statement...
+    ...
+}
+catch(Exception_Class Exception_Object) {
+    statement...
+    statement...
+    ...
+}    
+```
+Let's say, 
+```
+import java.util.Scanner;
+ 
+class Division {
+  public static void main(String[] args) {
+  int a, b, result;
+  Scanner input = new Scanner(System.in);
+  System.out.println("Input two integers");
+  a = input.nextInt();
+  b = input.nextInt();
+  
+  result = a / b;
+  System.out.println("Result = " + result);
+  }
+}
+```
+but we cannot divide by zero. so we get..
+<img src="https://user-images.githubusercontent.com/31917400/46554936-bed6b280-c8d9-11e8-90bb-ba83abc1e6ea.png" />
 
-
-
+Now, it's time to use `try` and `catch`!!
+```
+class Division {
+  public static void main(String[] args) {
+  int a, b, result;
+  Scanner input = new Scanner(System.in);
+  System.out.println("Input two integers");
+  a = input.nextInt();
+  b = input.nextInt();
+ 
+  // try block
+  try {
+    result  = a / b;
+    System.out.println("Result = " + result); }
+ 
+  // catch block
+  catch (ArithmeticException e) {
+    System.out.println("Exception caught: Division by zero."); }
+  }
+}
+```
 
 
 
