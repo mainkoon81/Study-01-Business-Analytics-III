@@ -573,7 +573,7 @@ if (amount > balance) { // Now what? }
  - When you throw an exception, execution does not continue with the next statement but with an **exception handler** ONLY.
 
 > **Catching Exception**
-Every exception should be handled somewhere in your program. If an exception has no handler, an **error message is printed, and your program terminates**. You can handle exceptions with the **`try/catch` statement**. Place the statement into a location of your program that knows how to handle a particular exception. 
+ - Every exception should be handled somewhere in your program. If an exception has no handler, an **error message is printed, and your program terminates**. You can handle exceptions with the **`try/catch` statement**. Place the statement into a location of your program that knows how to handle a particular exception. 
  - The `try` block contains one or more statements that may **cause an exception** of the kind that you are willing to handle. 
  - Each `catch` clause contains the **handler for an exception type**.
 ```
@@ -655,10 +655,10 @@ output:
 Here our catch block captures an exception which occurs because we are trying to access an array element which does not exist. Once an exception is thrown control comes out of try block and remaining instructions of try block will not be executed. At compilation time syntax and semantics checking is done and code isn't executed on machine so exceptions can only be detected at run time.
 
 > **Checked Exception**
- The exceptions that you can throw and catch fall into three categories.
-  - 1)`Internal errors` are reported by descendants of the type Error. One example is the `OutOfMemoryError`, which is thrown when all available computer memory has been used up. These are fatal errors that happen rarely. 
-  - 2)Descendants of `RuntimeException`, such as as `IndexOutOfBoundsException` or `IllegalArgumentException` indicate errors in your code. They are called `unchecked exceptions`.
-  - 3)All other exceptions are checked exceptions. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
+ - The exceptions that you can throw and catch fall into three categories.
+   - 1)`Internal errors` are reported by descendants of the type Error. One example is the `OutOfMemoryError`, which is thrown when all available computer memory has been used up. These are fatal errors that happen rarely. 
+   - 2)Descendants of `RuntimeException`, such as as `IndexOutOfBoundsException` or `IllegalArgumentException` indicate errors in your code. They are called `unchecked exceptions`.
+   - 3)All other exceptions are checked exceptions. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
 
 
 
