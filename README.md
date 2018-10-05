@@ -572,7 +572,7 @@ if (amount > balance) { // Now what? }
 
  - When you throw an exception, execution does not continue with the next statement but with an **exception handler** ONLY.
 
-### Catching Exception
+> **Catching Exception**
 Every exception should be handled somewhere in your program. If an exception has no handler, an **error message is printed, and your program terminates**. You can handle exceptions with the **`try/catch` statement**. Place the statement into a location of your program that knows how to handle a particular exception. 
  - The `try` block contains one or more statements that may **cause an exception** of the kind that you are willing to handle. 
  - Each `catch` clause contains the **handler for an exception type**.
@@ -629,8 +629,36 @@ class Division {
   }
 }
 ```
+ - Whenever an exception is caught corresponding `catch` block is executed, For example, this program catches `ArithmeticException` only. If some other kind of exception is thrown it will not be caught so it's the programmer work to take care of all the exceptions. As in our `try` block, **we are performing arithmetic so we are capturing only arithmetic exceptions**. 
+ - Use an object of Exception class as other classes inherit Exception class. 
+```
+class Exceptions {
+  public static void main(String[] args) {
+  String languages[] = { "C", "C++", "Java", "Perl", "Python" };
+       
+  try {
+    for (int c = 1; c <= 5; c++) {
+      System.out.println(languages[c]); }
+  }
+  catch (Exception e) {
+    System.out.println(e); }
+  }
+}
+```
+output: 
+ - C++
+ - Java
+ - Perl
+ - Python
+ - **java.lang.ArrayIndexOutOfBoundsException: 5**
 
+Here our catch block captures an exception which occurs because we are trying to access an array element which does not exist. Once an exception is thrown control comes out of try block and remaining instructions of try block will not be executed. At compilation time syntax and semantics checking is done and code isn't executed on machine so exceptions can only be detected at run time.
 
+> **Checked Exception**
+ The exceptions that you can throw and catch fall into three categories.
+  - 1)`Internal errors` are reported by descendants of the type Error. One example is the `OutOfMemoryError`, which is thrown when all available computer memory has been used up. These are fatal errors that happen rarely. 
+  - 2)Descendants of `RuntimeException`, such as as `IndexOutOfBoundsException` or `IllegalArgumentException` indicate errors in your code. They are called `unchecked exceptions`.
+  - 3)All other exceptions are checked exceptions. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
 
 
 
