@@ -696,7 +696,7 @@ assert sum == 6;
 ```
 ## what is collections ?????
 
-## damn, where is `new`? where does `Array` come from???????????
+## damn, where is `new`? where does `Arrays` come from???????????
  - >In the Java Generics, `Boxing` and `Unboxing` operations, used to convert from the primitive type to the wrapper class, are automatically inserted. ???????????????????
  - >The static method `asList()` takes any number of arguments, places them into an array, and returns a new list backed by the array. ??????????????????
 ## - >Collections let you easily grow or shrink the size of the collection, or switch to a different representation when appropriate, such as `linked list` or `hash_table` or `ordered_tree`. The introduction of generics, boxing and unboxing, foreach loops, and varargs in Java marks the first time that using collections is just as simple, perhaps even simpler, than using arrays.????????????? 
@@ -720,6 +720,7 @@ words.add("world");
 String s = ((String)words.get(0))+((String)words.get(1)) 
 assert s.equals("Hello-world");
 ```
+
 
 
 
