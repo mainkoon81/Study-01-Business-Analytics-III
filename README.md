@@ -317,14 +317,14 @@ public class Main {
 ```
 Dublin, 4 / London, 8 / Paris, 6 /
 
-### Arraylist
+### Arraylist<Class>
 `ArrayList<type> identifier = new ArrayList<type>();` 
 
-Compare: 
+ArrayList is also array, but special array...Compare: 
  - array:`int[] meh = new int[length]`..no need to say it's an array. 
  - array_list:`ArrayList<Integer> meh = new ArrayList<Integer>();`..it's special so say **ArrayList**.
 
-__So what's the problem? Why ArrayList?__: type and length
+__So Why ArrayList<Class>?__: type and length
  - 1) Stricktly `typed`: the entity types should be consistent
    - Solution: make a `custumized class` to create an independent array object.`ArrayList<Minkun> you = new ArratList<Minkun>();`
    - so..each entity in an array is an **object** born from the class called `Minkun`!!!! so any objects can go.
