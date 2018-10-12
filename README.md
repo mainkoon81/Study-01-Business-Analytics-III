@@ -661,6 +661,8 @@ Here our catch block captures an exception which occurs because we are trying to
    - 3)All other exceptions are `checked exceptions`. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
 
 
+### Java Generics & Collections
+
 
 
 
