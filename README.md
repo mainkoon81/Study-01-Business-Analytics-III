@@ -323,11 +323,11 @@ Dublin, 4 / London, 8 / Paris, 6 /
 Compare: 
  - array:`int[] meh = new int[length]`..no need to say it's an array. 
  - array_list:`ArrayList<Integer> meh = new ArrayList<Integer>();`..it's special so say **ArrayList**.
-So what's the problem?
- - 1> Stricktly typed: the entity types should be consistent
-   - Solution: make a `custumized class` to create an independent array object.`ArrayList<Fuck> you = new ArratList<Fuck>();`
-   - so..each entity in an array is **object** born from the class!!!! 
- - 2> fixed length: what if we don't know how many entities will be stored in the array?
+__So what's the problem?__: type and length
+ - 1> Stricktly `typed`: the entity types should be consistent
+   - Solution: make a `custumized class` to create an independent array object.`ArrayList<Minkun> you = new ArratList<Minkun>();`
+   - so..each entity in an array is an **object** born from the class called `Minkun`!!!! so any objects can go.
+ - 2> fixed `length`: what if we don't know how many entities will be stored in the array?
    - Solution: **ArrayList**
    
 Arraylist Can grow and shrink as needed! **ArrayList class** supplies methods for many common tasks, such as `object.size()`, inserting:`object.add(index, "sth")`, `object.remove(index)`, replacing:`object.set(index, "sth")`, `object.get(index)`, etc.
@@ -673,7 +673,7 @@ Here our catch block captures an exception which occurs because we are trying to
    - 2)Descendants of RuntimeException, such as as **IndexOutOfBoundsException** or **IllegalArgumentException** indicate errors in your code. They are called `unchecked exceptions`.
    - 3)All other exceptions are `checked exceptions`. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
 
-
+-------------------------------------------------------------------------------------------------------
 ### Java Generics & Collections
 ## [Intro]
 Generics and collections work well. As we shall see, combining them is synergistic: the whole is greater than the sum of its parts. 
@@ -686,7 +686,7 @@ int sum = 0;
 for(int i = 0; i < intsss.length; i++) { sum += intsss[i]; } 
 assert sum == 6;
 ``` 
- - Here is how to do the same thing with generics: the interface `List` and the class `Arrays` are part of the **Collections Framework**(both are found in the package `java.util`). The type `List` is now generic; you write `List<E>` to indicate a list with elements of type E. And as you expect, any type goes! 
+ - Here is how to do the same thing with generics: the interface `List` and the class `Arrays` are part of the **Collections Framework**(both are found in the package `java.util`). The type `List` is now generic; you write `List<E>` to indicate a list with elements of type E. And as you expect, any type goes!  
 ```
 List<Integer> intsss = Arrays.aslist(1,2,3);
 
@@ -694,20 +694,30 @@ int sum = 0;
 for(int n : intsss) { sum += n; }
 assert sum == 6;
 ```
+## what is collections ?????
+
 ## damn, where is `new`? where does `Array` come from???????????
  - >In the Java Generics, `Boxing` and `Unboxing` operations, used to convert from the primitive type to the wrapper class, are automatically inserted. ???????????????????
  - >The static method `asList()` takes any number of arguments, places them into an array, and returns a new list backed by the array. ??????????????????
 ## - >Collections let you easily grow or shrink the size of the collection, or switch to a different representation when appropriate, such as `linked list` or `hash_table` or `ordered_tree`. The introduction of generics, boxing and unboxing, foreach loops, and varargs in Java marks the first time that using collections is just as simple, perhaps even simpler, than using arrays.????????????? 
 
 ## [Generics]
-An interface or class may be declared to take one or more `type parameters`, which are written in `<?>` angle brackets and should be supplied when you 1)**declare a variable** belonging to the interface or class or when you 2)**create a new instance** of a class.
- - In the Collections Framework, class `ArrayList<E>` implements interface `List<E>`. This declares the variable `words` to contain a `list of strings`, and *****creates an **instance** of an ArrayList*****:
+ - We can replace the **parameters** that we declared from the method. Generics allow us to create **class's interface** of the methods that takes the parameters called **type-parameter**. An **interface** or **class** maybe declared to take one or more `type parameters`, which are written in `<..~>` angle brackets and should be supplied when you 1)**declare a variable** belonging to the interface or class or when you 2)**create a new instance** of a class.?????????????????????????????
+ - In the **Collections_Framework**, class `ArrayList<E>` implements interface `List<E>`. This declares the variable `words` to contain a `list of strings`, and ***creates an "instance" of an ArrayList***: ???????
 ```
 List<String> words = new ArrayList<String>();
 
 words.add("Hello-");
 words.add("world");
 String s = words.get(0) + words.get(1);
+assert s.equals("Hello-world");
+```
+ - In Java before generics, the same code would be written as:
+```
+List words = new ArrayList(); 
+words.add("Hello-"); 
+words.add("world"); 
+String s = ((String)words.get(0))+((String)words.get(1)) 
 assert s.equals("Hello-world");
 ```
 
