@@ -697,12 +697,12 @@ assert sum == 6;
 ## what is collections ?????
 
 ## damn, where is `new`? where does `Arrays` come from???????????
- - >In the Java Generics, `Boxing` and `Unboxing` operations, used to convert from the primitive type to the wrapper class, are automatically inserted. ???????????????????
+ - >In the Java Generics, `Boxing` and `Unboxing` operations, used to convert from the primitive type to the wrapper class, are automatically inserted. ??????????????????? (in ordinary java, it ain't work?)
  - >The static method `asList()` takes any number of arguments, places them into an array, and returns a new list backed by the array. ??????????????????
 ## - >Collections let you easily grow or shrink the size of the collection, or switch to a different representation when appropriate, such as `linked list` or `hash_table` or `ordered_tree`. The introduction of generics, boxing and unboxing, foreach loops, and varargs in Java marks the first time that using collections is just as simple, perhaps even simpler, than using arrays.????????????? 
 
 ## [Generics]
- - We can replace the **parameters** that we declared from the method. Generics allow us to create **class's interface** of the methods that takes the parameters called **type-parameter**. An **interface** or **class** maybe declared to take one or more `type parameters`, which are written in `<..~>` angle brackets and should be supplied when you 1)**declare a variable** belonging to the interface or class or when you 2)**create a new instance** of a class.?????????????????????????????
+ - We can replace the **parameters** that we declared from the method. Generics allow us to create **class's interface** of the methods that takes the parameters called `type-parameters`. An **interface** or **class** maybe declared to take one or more `type parameters`, which are written in `<class>` angle brackets and should be supplied when you 1)**declare a variable** belonging to the interface or class or when you 2)**create a new instance** of a class.?????????????????????????????
  - In the **Collections_Framework**, class `ArrayList<E>` implements interface `List<E>`. This declares the variable `words` to contain a `list of strings`, and ***creates an "instance" of an ArrayList***: ???????
 ```
 List<String> words = new ArrayList<String>();
