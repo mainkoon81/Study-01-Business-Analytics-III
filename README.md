@@ -318,16 +318,29 @@ public class Main {
 Dublin, 4 / London, 8 / Paris, 6 /
 
 ### Arraylist
-`ArrayList<type> identifier = new ArrayList<type>();`
+`ArrayList<type> identifier = new ArrayList<type>();` 
 
+Compare: 
+ - array:`int[] meh = new int[length]`..no need to say it's an array. 
+ - array_list:`ArrayList<Integer> meh = new ArrayList<Integer>();`..it's special so say **ArrayList**.
 So what's the problem?
  - 1> Stricktly typed: the entity types should be consistent
-   - Solution: make a custumized class to create an independent array object.
-   - so..each entity in an array is **object** born from the class!!!!
+   - Solution: make a `custumized class` to create an independent array object.`ArrayList<Fuck> you = new ArratList<Fuck>();`
+   - so..each entity in an array is **object** born from the class!!!! 
  - 2> fixed length: what if we don't know how many entities will be stored in the array?
-   - Solution: **Arraylist**
+   - Solution: **ArrayList**
    
 Arraylist Can grow and shrink as needed! **ArrayList class** supplies methods for many common tasks, such as `object.size()`, inserting:`object.add(index, "sth")`, `object.remove(index)`, replacing:`object.set(index, "sth")`, `object.get(index)`, etc.
+
+ - `int x = 5;`: x is not an object, but becomes an object. 
+ - `Integer x = new Integer(5);`: x is an object. To treat `primitive_type values` as objects, you must use **wrapper_classes**. In Java, conversion between `primitive_types` and the corresponding **wrapper_classes** is automatic. This process is called **auto-boxing** (even though **auto-wrapping** would've been more consistent). 
+ - FYI, Remember to use the **wrapper_type** when you declare the **ArrayList**, and then rely on auto-boxing ?
+ 
+```
+ArrayList<Double> doublesss = new ArrayList<Double>(); 
+doublesss.add(29.95); 
+double x = doublesss.get(0);`
+```
 ```
 public class BankAccount {
     //instance variables
@@ -662,8 +675,41 @@ Here our catch block captures an exception which occurs because we are trying to
 
 
 ### Java Generics & Collections
+## [Intro]
+Generics and collections work well. As we shall see, combining them is synergistic: the whole is greater than the sum of its parts. 
+> Q. Put three integers into a list(collection?) and add them together. 
+ - meh...using an array.
+```
+int[] intsss = new int[] {1, 2, 3}; 
 
+int sum = 0; 
+for(int i = 0; i < intsss.length; i++) { sum += intsss[i]; } 
+assert sum == 6;
+``` 
+ - Here is how to do the same thing with generics: the interface `List` and the class `Arrays` are part of the **Collections Framework**(both are found in the package `java.util`). The type `List` is now generic; you write `List<E>` to indicate a list with elements of type E. And as you expect, any type goes! 
+```
+List<Integer> intsss = Arrays.aslist(1,2,3);
 
+int sum = 0;
+for(int n : intsss) { sum += n; }
+assert sum == 6;
+```
+## damn, where is `new`? where does `Array` come from???????????
+ - >In the Java Generics, `Boxing` and `Unboxing` operations, used to convert from the primitive type to the wrapper class, are automatically inserted. ???????????????????
+ - >The static method `asList()` takes any number of arguments, places them into an array, and returns a new list backed by the array. ??????????????????
+## - >Collections let you easily grow or shrink the size of the collection, or switch to a different representation when appropriate, such as `linked list` or `hash_table` or `ordered_tree`. The introduction of generics, boxing and unboxing, foreach loops, and varargs in Java marks the first time that using collections is just as simple, perhaps even simpler, than using arrays.????????????? 
+
+## [Generics]
+An interface or class may be declared to take one or more `type parameters`, which are written in `<?>` angle brackets and should be supplied when you 1)**declare a variable** belonging to the interface or class or when you 2)**create a new instance** of a class.
+ - In the Collections Framework, class `ArrayList<E>` implements interface `List<E>`. This declares the variable `words` to contain a `list of strings`, and *****creates an **instance** of an ArrayList*****:
+```
+List<String> words = new ArrayList<String>();
+
+words.add("Hello-");
+words.add("world");
+String s = words.get(0) + words.get(1);
+assert s.equals("Hello-world");
+```
 
 
 
