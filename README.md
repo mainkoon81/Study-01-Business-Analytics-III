@@ -323,18 +323,18 @@ Dublin, 4 / London, 8 / Paris, 6 /
 Compare: 
  - array:`int[] meh = new int[length]`..no need to say it's an array. 
  - array_list:`ArrayList<Integer> meh = new ArrayList<Integer>();`..it's special so say **ArrayList**.
-__So what's the problem?__: type and length
- - 1> Stricktly `typed`: the entity types should be consistent
+
+__So what's the problem? Why ArrayList?__: type and length
+ - 1) Stricktly `typed`: the entity types should be consistent
    - Solution: make a `custumized class` to create an independent array object.`ArrayList<Minkun> you = new ArratList<Minkun>();`
    - so..each entity in an array is an **object** born from the class called `Minkun`!!!! so any objects can go.
- - 2> fixed `length`: what if we don't know how many entities will be stored in the array?
-   - Solution: **ArrayList**
-   
-Arraylist Can grow and shrink as needed! **ArrayList class** supplies methods for many common tasks, such as `object.size()`, inserting:`object.add(index, "sth")`, `object.remove(index)`, replacing:`object.set(index, "sth")`, `object.get(index)`, etc.
-
- - `int x = 5;`: x is not an object, but becomes an object. 
- - `Integer x = new Integer(5);`: x is an object. To treat `primitive_type values` as objects, you must use **wrapper_classes**. In Java, conversion between `primitive_types` and the corresponding **wrapper_classes** is automatic. This process is called **auto-boxing** (even though **auto-wrapping** would've been more consistent). 
- - FYI, Remember to use the **wrapper_type** when you declare the **ArrayList**, and then rely on auto-boxing ?
+ - 2) fixed `length`: what if we don't know how many entities will be stored in the array?
+   - Solution: **ArrayList**. Arraylist Can grow and shrink as needed! 
+ - 3) **ArrayList class** supplies methods for many common tasks, such as `object.size()`, inserting:`object.add(index, "sth")`, `object.remove(index)`, replacing:`object.set(index, "sth")`, `object.get(index)`, etc. Here, object is each element of our ArrayList!
+ - 4) auto-boxing?
+   - `int x = 5;`: x is not an object. It's a variable. 
+   - `Integer x = new Integer(5);`: x is an object. To treat `primitive_type values` as objects, you must use **wrapper_classes**. In Java, conversion between `primitive_types` and the corresponding **wrapper_classes** is automatic. This process is called **auto-boxing** (even though **auto-wrapping** would've been more consistent). 
+   - FYI, Remember to use the **wrapper_type** when you declare the **ArrayList**, and then rely on auto-boxing.
  
 ```
 ArrayList<Double> doublesss = new ArrayList<Double>(); 
