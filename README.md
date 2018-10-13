@@ -716,7 +716,7 @@ assert s.equals("Hello-world");
  - In Java before generics, the same code would be written as:
 ## whattttttt? ArrayList? List? where is <> ??????????????????????
  - Without generics, the type parameters are omitted, but you must explicitly cast whenever an element is extracted from the list.
- - We say that generics are implemented by erasure because the types `List<Integer>`, `List<String>`, and `List<List<String>>` are all represented at run-time by the same type, `List`. We also use erasure to describe the process that converts the first program to the second??????????????????the process erases type parameters but adds casts. 
+ - We say that generics are implemented by erasure because the types `List<Integer>`, `List<String>`, and `List<List<String>>` are all represented at run-time by the same type, `List`. We also use `erasure` to describe the process that converts the first program to the second??????????????????the process erases type parameters but adds casts. 
 ```
 List words = new ArrayList(); 
 words.add("Hello-"); 
@@ -747,6 +747,9 @@ Our static method `toList` accepts an array of type `T[]` and returns a list of 
 List<Integer> ints = Lists.toList(new Integer[] { 1, 2, 3 }); // here, boxing converts 1, 2, 3 from `int` to `Integer`. 
 List<String> words = Lists.toList(new String[] { "hello", "world" });
 ```
+
+
+
 Packing the arguments into an array is cumbersome. The `vararg feature` permits a special, more convenient syntax for the case in which the **last argument of a method is an array**. To use this feature, we replace `T[]` with `T…` in the method declaration: 
 ```
 class Lists {  
@@ -763,6 +766,7 @@ List<Integer> ints = Lists.toList(1, 2, 3);
 List<String> words = Lists.toList("hello", "world");
 ```
  - In this examples, the **type_parameter** to the generic method is inferred, but it may also be given explicitly: `List<Integer> ints = Lists.<Integer>toList();` and `List<Object> objs = Lists.<Object>toList(1, "two", "hello");`
+ - In general, the following rule of thumb suffices: in a call to a generic method, if there are one or more arguments that correspond to a type parameter and they all have the same type then the type parameter may be inferred; if there are no arguments that correspond to the type parameter or the arguments belong to different subtypes of the intended type then the type parameter must be given explicitly.?????????????????????????
  
 Any number of arguments may precede a last vararg argument. Here is a method that accepts a list and adds all the additional arguments to the end of the list: 
 ```
@@ -781,11 +785,6 @@ Lists.addAll(ints, new Integer[] { 3, 4 });
 assert ints.toString().equals("[1, 2, 3, 4]");
 ```
 Since `varargs` **always create an array**, they should be used only when the argument does not have a generic type.???????
-
-
- 
- 
-
 
 
 
