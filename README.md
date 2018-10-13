@@ -674,7 +674,7 @@ Here our catch block captures an exception which occurs because we are trying to
    - 3)All other exceptions are `checked exceptions`. These exceptions indicate that something has gone wrong for some external reason beyond your control. 
 
 -------------------------------------------------------------------------------------------------------
-### Java Generics & Collections
+# Java Generics & Collections
 ## [Intro]
 Generics and collections work well. As we shall see, combining them is synergistic: the whole is greater than the sum of its parts. 
 > Q. Put three integers into a list(collection?) and add them together. 
@@ -687,6 +687,7 @@ for(int i = 0; i < intsss.length; i++) { sum += intsss[i]; }
 assert sum == 6;
 ``` 
  - Here is how to do the same thing with generics: the interface `List` and the class `Arrays` are part of the **Collections Framework**(both are found in the package `java.util`). The type `List` is now generic; you write `List<E>` to indicate a list with elements of type E. And as you expect, any type goes!  
+## what is collections ????? why List can be Arrays???
 ```
 List<Integer> intsss = Arrays.aslist(1,2,3);
 
@@ -694,16 +695,16 @@ int sum = 0;
 for(int n : intsss) { sum += n; }
 assert sum == 6;
 ```
-## what is collections ?????
-
 ## damn, where is `new`? where does `Arrays` come from???????????
  - >In the Java Generics, `Boxing` and `Unboxing` operations, used to convert from the primitive type to the wrapper class, are automatically inserted. ??????????????????? (in ordinary java, it ain't work?)
  - >The static method `asList()` takes any number of arguments, places them into an array, and returns a new list backed by the array. ??????????????????
 ## - >Collections let you easily grow or shrink the size of the collection, or switch to a different representation when appropriate, such as `linked list` or `hash_table` or `ordered_tree`. The introduction of generics, boxing and unboxing, foreach loops, and varargs in Java marks the first time that using collections is just as simple, perhaps even simpler, than using arrays.????????????? 
 
+--------------------------------------------------------------------------------------------------------
 ## [Generics]
  - We can replace the **parameters** that we declared from the method. Generics allow us to create **class's interface** of the methods that takes the parameters called `type-parameters`. An **interface** or **class** maybe declared to take one or more `type parameters`, which are written in `<class>` angle brackets and should be supplied when you 1)**declare a variable** belonging to the interface or class or when you 2)**create a new instance** of a class.?????????????????????????????
- - In the **Collections_Framework**, class `ArrayList<E>` implements interface `List<E>`. This declares the variable `words` to contain a `list of strings`, and ***creates an "instance" of an ArrayList***: ???????
+ - In the **Collections_Framework**, class `ArrayList<E>` implements interface `List<E>`. 
+## This declares the variable `words` to contain a `list of strings`, and ***creates an "instance" of an ArrayList***: ???????
 ```
 List<String> words = new ArrayList<String>();
 
@@ -713,6 +714,9 @@ String s = words.get(0) + words.get(1);
 assert s.equals("Hello-world");
 ```
  - In Java before generics, the same code would be written as:
+## whattttttt? ArrayList? List? where is <> ??????????????????????
+ - Without generics, the type parameters are omitted, but you must explicitly cast whenever an element is extracted from the list.
+ - We say that generics are implemented by erasure because the types `List<Integer>`, `List<String>`, and `List<List<String>>` are all represented at run-time by the same type, `List`. We also use erasure to describe the process that converts the first program to the second??????????????????the process erases type parameters but adds casts. 
 ```
 List words = new ArrayList(); 
 words.add("Hello-"); 
@@ -720,6 +724,67 @@ words.add("world");
 String s = ((String)words.get(0))+((String)words.get(1)) 
 assert s.equals("Hello-world");
 ```
+ - Another consequence of implementing generics by erasure is that array types differ in key ways from parameterized types. Executing a string array `new String[length]` allocates an [array], and stores in that array an indication that its components are of type String. In contrast, executing an ArrayList of String `new ArrayList<String>()` allocates a [list], but does not store in the list **any indication of the type of its elements**. ?????????????????
+ - Generics in Java resemble templates in C++. There are just two important things to bear in mind about the relationship between Java generics and C++ templates: `syntax` and `semantics`. The syntax is deliberately similar and the semantics are deliberately different.
+ - Syntactically, angle brackets`<>` were chosen because they are familiar to C++ users, and because square brackets would be hard to parse. However, there is one difference in syntax. In C++, nested parameters require extra spaces, so you see things like this: `List< List<String> >`. ????????????????????????
+ - Semantically, Java generics are defined by `erasure`, whereas C++ templates are defined by `expansion`. ??????????????????
+
+ - Conversion of a primitive type to the corresponding reference type is called boxing and conversion of the reference type to the corresponding primitive type is called unboxing. 
+
+## [Generic methods & Var-args]
+Here is a method that accepts an array of any type and converts it to a list:
+```
+class Lists {  
+   public static <T> List<T> toList(T[] arr) {    
+      List<T> list = new ArrayList<T>();    
+      for (T elt : arr) { list.add(elt); }    
+      return list;  
+   }
+}
+```
+Our static method `toList` accepts an array of type `T[]` and returns a list of type `List<T>`, and does so for any type `T`, `which is indicated by writing <T> at the beginning of the method signature, which declares T as a new type variable`. A method which declares a type variable in this way is called a generic method. The method may be invoked as follows:
+```
+List<Integer> ints = Lists.toList(new Integer[] { 1, 2, 3 }); // here, boxing converts 1, 2, 3 from `int` to `Integer`. 
+List<String> words = Lists.toList(new String[] { "hello", "world" });
+```
+Packing the arguments into an array is cumbersome. The `vararg feature` permits a special, more convenient syntax for the case in which the **last argument of a method is an array**. To use this feature, we replace `T[]` with `T…` in the method declaration: 
+```
+class Lists {  
+   public static <T> List<T> toList(T... arr) {    
+      List<T> list = new ArrayList<T>();    
+      for (T elt : arr) { list.add(elt); }    
+      return list;  
+   }
+}
+```
+Now the method may be invoked as follows:
+```
+List<Integer> ints = Lists.toList(1, 2, 3); 
+List<String> words = Lists.toList("hello", "world");
+```
+ - In this examples, the **type_parameter** to the generic method is inferred, but it may also be given explicitly: `List<Integer> ints = Lists.<Integer>toList();` and `List<Object> objs = Lists.<Object>toList(1, "two", "hello");`
+ 
+Any number of arguments may precede a last vararg argument. Here is a method that accepts a list and adds all the additional arguments to the end of the list: 
+```
+class Lists {  
+   public static <T> void addAll(List<T> list, T... arr) {  
+      for (T elt : arr) { list.add(elt); }
+      .....
+      ...
+```
+Whenever a `vararg` is declared, one may either pass a list of arguments to be implicitly packed into an array, or explicitly pass the array directly. Thus, the preceding method may be invoked as follows: 
+```
+List<Integer> ints = new ArrayList<Integer>(); 
+Lists.addAll(ints, 1, 2); 
+Lists.addAll(ints, new Integer[] { 3, 4 }); 
+
+assert ints.toString().equals("[1, 2, 3, 4]");
+```
+Since `varargs` **always create an array**, they should be used only when the argument does not have a generic type.???????
+
+
+ 
+ 
 
 
 
